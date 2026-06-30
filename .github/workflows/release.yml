@@ -1,0 +1,52 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Semantic version — e.g. 1.2.3 or 2.0.0-beta.1'
+        required: true
+        type: string
+
+jobs:
+  release:
+    name: Publish Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate semver
+        run: |
+          if ! echo "${{ inputs.version }}" \
+               | grep -Eq '^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(-[a-zA-Z0-9][a-zA-Z0-9._-]*)?$'; then
+            echo "::error::Invalid semver '${{ inputs.version }}'. \
+          Expected MAJOR.MINOR.PATCH or MAJOR.MINOR.PATCH-prerelease (e.g. 1.2.3-beta.1)."
+            exit 1
+          fi
+
+      - name: Publish release
+        run: |
+          TAG="v${{ inputs.version }}"
+
+          # Promote existing draft if one exists, otherwise create fresh
+          DRAFT_TAG=$(gh release list --json tagName,isDraft \
+            --jq '.[] | select(.isDraft) | .tagName' | head -1)
+
+          if [ -n "$DRAFT_TAG" ]; then
+            gh release edit "$DRAFT_TAG" \
+              --tag "$TAG" \
+              --title "$TAG" \
+              --draft=false \
+              --latest
+          else
+            gh release create "$TAG" \
+              --title "$TAG" \
+              --generate-notes \
+              --latest
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
