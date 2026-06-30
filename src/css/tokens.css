@@ -7,54 +7,54 @@
 
 :root {
 
-  /* ── Color palette ─────────────────────────────────────────────────────── */
+  /* ── Color palette — white-based, warm gray ────────────────────────────── */
 
-  /* Primary — light sage green */
-  --color-primary-50 : #EFF6ED;
-  --color-primary-100: #D8EDD4;
-  --color-primary-200: #B4DAA9;
-  --color-primary-300: #8DC47E; /* light green hover accent */
-  --color-primary-400: #6BAD5B;
-  --color-primary-500: #52923F;
-  --color-primary-600: #437535; /* brand — readable on white */
-  --color-primary-700: #345A29;
-  --color-primary-800: #25401C;
-  --color-primary-900: #162811;
+  /* Primary — warm gray (headings, nav, interactive) */
+  --color-primary-50 : #F7F7F5;
+  --color-primary-100: #EFEFEC;
+  --color-primary-200: #E2E1DC;
+  --color-primary-300: #CCCBC5;
+  --color-primary-400: #AEADA7;
+  --color-primary-500: #8A8983;
+  --color-primary-600: #66645F; /* brand — readable on white */
+  --color-primary-700: #4E4D49;
+  --color-primary-800: #373735; /* dark section background */
+  --color-primary-900: #242422;
 
-  /* Accent — same sage family, slightly softer for eyebrows & highlights */
-  --color-accent-50 : #EFF6ED;
-  --color-accent-100: #D8EDD4;
-  --color-accent-200: #B4DAA9;
-  --color-accent-300: #8DC47E;
-  --color-accent-400: #6BAD5B;
-  --color-accent-500: #52923F;
-  --color-accent-600: #437535;
-  --color-accent-700: #345A29;
-  --color-accent-800: #25401C;
-  --color-accent-900: #162811;
+  /* Accent — same warm gray scale */
+  --color-accent-50 : #F7F7F5;
+  --color-accent-100: #EFEFEC;
+  --color-accent-200: #E2E1DC;
+  --color-accent-300: #CCCBC5;
+  --color-accent-400: #AEADA7;
+  --color-accent-500: #8A8983;
+  --color-accent-600: #66645F;
+  --color-accent-700: #4E4D49;
+  --color-accent-800: #373735;
+  --color-accent-900: #242422;
 
-  /* Neutral — very light, barely warm */
+  /* Neutral — pure white base */
   --color-neutral-0  : #FFFFFF;
-  --color-neutral-50 : #FAFAF8;
-  --color-neutral-100: #F4F3EF;
-  --color-neutral-200: #EAE7E0;
-  --color-neutral-300: #D5D1C8;
-  --color-neutral-400: #B5B0A6;
-  --color-neutral-500: #8E8A82;
-  --color-neutral-600: #6C6860;
-  --color-neutral-700: #514E47;
-  --color-neutral-800: #383530;
-  --color-neutral-900: #3E3C38; /* soft near-black — lower contrast */
-  --color-neutral-950: #222020;
+  --color-neutral-50 : #FAFAF9;
+  --color-neutral-100: #F5F4F2;
+  --color-neutral-200: #ECEAE6;
+  --color-neutral-300: #D8D6D0;
+  --color-neutral-400: #B8B6B0;
+  --color-neutral-500: #8E8D87;
+  --color-neutral-600: #6C6B65;
+  --color-neutral-700: #515050;
+  --color-neutral-800: #373735;
+  --color-neutral-900: #242422;
+  --color-neutral-950: #151513;
 
   /* Semantic aliases */
-  --color-bg          : #FAFAF8;  /* near white, barely warm */
-  --color-bg-subtle   : #F4F3EF;  /* very light warm gray */
-  --color-surface     : #FFFFFF;  /* pure white cards */
-  --color-text        : #3E3C38;  /* soft dark, not harsh */
-  --color-text-muted  : #8E8A82;  /* medium warm gray */
+  --color-bg          : #FFFFFF;
+  --color-bg-subtle   : #FAFAF9;
+  --color-surface     : #FFFFFF;
+  --color-text        : #3C3C3A;  /* warm charcoal — not harsh black */
+  --color-text-muted  : #8E8D87;  /* medium warm gray */
   --color-text-inverse: var(--color-neutral-0);
-  --color-border      : #EAE7E0;  /* barely visible */
+  --color-border      : #ECEAE6;  /* barely visible */
   --color-border-strong: var(--color-neutral-300);
 
   /* Status */
@@ -131,7 +131,7 @@
   --shadow-md : 0 4px 8px -2px rgb(0 0 0 / 0.06), 0 2px 4px -2px rgb(0 0 0 / 0.04);
   --shadow-lg : 0 8px 20px -4px rgb(0 0 0 / 0.07), 0 4px 8px -4px rgb(0 0 0 / 0.04);
   --shadow-xl : 0 20px 25px -5px rgb(0 0 0 / 0.06), 0 8px 10px -6px rgb(0 0 0 / 0.04);
-  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.14);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.12);
 
 
   /* ── Transitions ───────────────────────────────────────────────────────── */
