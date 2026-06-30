@@ -18,6 +18,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/src/css/tokens.css" />
     <link rel="stylesheet" href="/src/css/global.css" />
+    <link rel="stylesheet" href="/src/css/sections/pool-outdoor.css" />
 
     <title>Villa — Luxury Private Retreat</title>
   </head>
@@ -41,6 +42,77 @@
       </section>
 
       <section id="pool-outdoor" aria-label="Pool and Outdoor">
+        <div class="pool-outdoor__inner">
+
+          <!-- ── Main feature: large image left, copy right ─────────────────
+               SWAP: replace the src below with the primary pool photo.
+               Recommended size: 1800 × 1200 px (3:2 ratio).
+               Example: /images/pool-main.jpg
+          ─────────────────────────────────────────────────────────────────── -->
+          <div class="pool-outdoor__feature">
+            <figure class="pool-outdoor__main-image">
+              <img
+                src="/images/pool-main.jpg"
+                alt="The villa's private infinity pool overlooking the valley"
+                width="900"
+                height="600"
+                loading="lazy"
+              />
+            </figure>
+
+            <!-- ── Copy block — edit text directly in HTML ──────────────── -->
+            <div class="pool-outdoor__copy">
+              <span class="section-eyebrow">Outdoor Living</span>
+              <h2>Your Private Infinity Pool</h2>
+              <p>
+                Drift into the day with an early morning swim, or watch the sun
+                set from the water's edge. Our heated infinity pool blends
+                seamlessly with the surrounding landscape, offering complete
+                privacy and uninterrupted views.
+              </p>
+              <p>
+                The poolside terrace is furnished with sun loungers, an outdoor
+                dining area, and a lush tropical garden — the perfect stage for
+                lazy afternoons and long, candlelit evenings.
+              </p>
+            </div>
+          </div>
+
+          <!-- ── Supporting gallery ─────────────────────────────────────────
+               SWAP: replace each src with a supporting outdoor photo.
+               Recommended size: 1200 × 800 px (3:2 ratio).
+          ─────────────────────────────────────────────────────────────────── -->
+          <div class="pool-outdoor__gallery">
+            <figure>
+              <img
+                src="/images/pool-terrace.jpg"
+                alt="Poolside terrace with sun loungers"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+            </figure>
+            <figure>
+              <img
+                src="/images/pool-evening.jpg"
+                alt="Pool illuminated at dusk"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+            </figure>
+            <figure>
+              <img
+                src="/images/pool-garden.jpg"
+                alt="Tropical garden surrounding the pool"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+
+        </div>
       </section>
 
       <section id="interior-rooms" aria-label="Interior Rooms">
