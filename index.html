@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="/src/css/sections/location.css" />
     <link rel="stylesheet" href="/src/css/sections/amenities.css" />
     <link rel="stylesheet" href="/src/css/sections/contact.css" />
+    <link rel="stylesheet" href="/src/css/animations.css" />
+    <link rel="stylesheet" href="/src/css/lightbox.css" />
 
     <title>Villa — Luxury Private Retreat</title>
   </head>
@@ -31,7 +33,12 @@
     <header>
       <nav aria-label="Main navigation">
         <a href="#hero" class="nav-brand">Villa</a>
-        <ul>
+        <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-list">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+        <ul id="nav-list">
           <li><a href="#hero">Home</a></li>
           <li><a href="#pool-outdoor">Pool & Outdoor</a></li>
           <li><a href="#interior-rooms">Rooms</a></li>
@@ -98,7 +105,7 @@
             </figure>
 
             <!-- ── Copy block — edit text directly in HTML ──────────────── -->
-            <div class="pool-outdoor__copy">
+            <div class="pool-outdoor__copy" data-animate>
               <span class="section-eyebrow">Outdoor Living</span>
               <h2>Your Private Infinity Pool</h2>
               <p>
@@ -155,7 +162,7 @@
       <section id="interior-rooms" aria-label="Interior Rooms">
         <div class="rooms__inner">
 
-          <div class="rooms__header">
+          <div class="rooms__header" data-animate>
             <span class="rooms__eyebrow">Accommodations</span>
             <h2>Our Rooms &amp; Spaces</h2>
             <p>Every room is designed for comfort and elegance, blending natural materials with modern amenities.</p>
@@ -170,7 +177,7 @@
           <div class="rooms__grid">
 
             <!-- SWAP: /images/rooms/master-suite.jpg -->
-            <article class="room-card">
+            <article class="room-card" data-animate data-animate-delay="1">
               <div class="room-card__image">
                 <img src="/images/rooms/master-suite.jpg" alt="Master suite with king bed and garden view" width="900" height="600" loading="lazy" />
               </div>
@@ -181,7 +188,7 @@
             </article>
 
             <!-- SWAP: /images/rooms/bedroom-2.jpg -->
-            <article class="room-card">
+            <article class="room-card" data-animate data-animate-delay="2">
               <div class="room-card__image">
                 <img src="/images/rooms/bedroom-2.jpg" alt="Second bedroom with twin beds" width="900" height="600" loading="lazy" />
               </div>
@@ -192,7 +199,7 @@
             </article>
 
             <!-- SWAP: /images/rooms/bedroom-3.jpg -->
-            <article class="room-card">
+            <article class="room-card" data-animate data-animate-delay="3">
               <div class="room-card__image">
                 <img src="/images/rooms/bedroom-3.jpg" alt="Third bedroom with queen bed" width="900" height="600" loading="lazy" />
               </div>
@@ -203,7 +210,7 @@
             </article>
 
             <!-- SWAP: /images/rooms/living-room.jpg -->
-            <article class="room-card">
+            <article class="room-card" data-animate data-animate-delay="4">
               <div class="room-card__image">
                 <img src="/images/rooms/living-room.jpg" alt="Open-plan living and dining area" width="900" height="600" loading="lazy" />
               </div>
@@ -214,7 +221,7 @@
             </article>
 
             <!-- SWAP: /images/rooms/kitchen.jpg -->
-            <article class="room-card">
+            <article class="room-card" data-animate data-animate-delay="5">
               <div class="room-card__image">
                 <img src="/images/rooms/kitchen.jpg" alt="Fully equipped villa kitchen" width="900" height="600" loading="lazy" />
               </div>
@@ -225,7 +232,7 @@
             </article>
 
             <!-- SWAP: /images/rooms/bathroom.jpg -->
-            <article class="room-card">
+            <article class="room-card" data-animate data-animate-delay="6">
               <div class="room-card__image">
                 <img src="/images/rooms/bathroom.jpg" alt="Open-air bathroom with soaking tub" width="900" height="600" loading="lazy" />
               </div>
@@ -242,7 +249,7 @@
       <section id="location" aria-label="Location">
         <div class="location__inner">
 
-          <div class="location__header">
+          <div class="location__header" data-animate>
             <span class="location__eyebrow">Where We Are</span>
             <h2>Location &amp; Surroundings</h2>
             <!-- SWAP: update this paragraph to describe your villa's actual location -->
@@ -341,7 +348,7 @@
       <section id="amenities" aria-label="Amenities">
         <div class="amenities__inner">
 
-          <div class="amenities__header">
+          <div class="amenities__header" data-animate>
             <span class="amenities__eyebrow">Facilities</span>
             <h2>Amenities &amp; Facilities</h2>
             <p>Everything you need for a seamless stay — nothing you don't.</p>
@@ -355,42 +362,42 @@
           ──────────────────────────────────────────────────────────────────── -->
           <ul class="amenities__grid">
 
-            <li class="amenity-item">
+            <li class="amenity-item" data-animate data-animate-delay="1">
               <span class="amenity-item__icon" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12c0-5.5 4.5-10 10-10s10 4.5 10 10M2 12c0 5.5 4.5 10 10 10s10-4.5 10-10"/></svg>
               </span>
               <span class="amenity-item__label">Private Pool</span>
             </li>
 
-            <li class="amenity-item">
+            <li class="amenity-item" data-animate data-animate-delay="2">
               <span class="amenity-item__icon" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
               </span>
               <span class="amenity-item__label">Fast WiFi</span>
             </li>
 
-            <li class="amenity-item">
+            <li class="amenity-item" data-animate data-animate-delay="3">
               <span class="amenity-item__icon" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
               </span>
               <span class="amenity-item__label">Air Conditioning</span>
             </li>
 
-            <li class="amenity-item">
+            <li class="amenity-item" data-animate data-animate-delay="4">
               <span class="amenity-item__icon" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V12a9 9 0 1 1 18 0v10"/><path d="M3 22h18"/><path d="M12 22V12"/></svg>
               </span>
               <span class="amenity-item__label">Full Kitchen</span>
             </li>
 
-            <li class="amenity-item">
+            <li class="amenity-item" data-animate data-animate-delay="5">
               <span class="amenity-item__icon" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
               </span>
               <span class="amenity-item__label">Parking</span>
             </li>
 
-            <li class="amenity-item">
+            <li class="amenity-item" data-animate data-animate-delay="6">
               <span class="amenity-item__icon" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
               </span>
@@ -446,7 +453,7 @@
       <section id="contact" aria-label="Contact">
         <div class="contact__inner">
 
-          <div class="contact__header">
+          <div class="contact__header" data-animate>
             <span class="contact__eyebrow">Contact Us</span>
             <h2>Get in Touch</h2>
             <!-- SWAP: update subtext to match your villa's tone -->
