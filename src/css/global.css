@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-bold);
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);
-  color: var(--color-primary-600);
+  color: var(--color-text);
 }
 
 
@@ -108,7 +108,7 @@ header {
 }
 
 header.is-scrolled {
-  background-color: var(--color-surface);
+  background-color: #FFFFFF;
   border-bottom-color: var(--color-border);
   box-shadow: var(--shadow-sm);
 }

@@ -55,7 +55,7 @@
 
 .pool-outdoor__copy h2 {
   font-size: var(--text-3xl);
-  color: var(--color-primary-600);
+  color: var(--color-text);
 }
 
 .pool-outdoor__copy p {
