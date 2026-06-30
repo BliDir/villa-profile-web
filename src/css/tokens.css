@@ -9,52 +9,52 @@
 
   /* ── Color palette ─────────────────────────────────────────────────────── */
 
-  /* Primary — deep tropical teal */
-  --color-primary-50 : #f0f8f7;
-  --color-primary-100: #d4eeeb;
-  --color-primary-200: #aadcd7;
-  --color-primary-300: #72c2bc;
-  --color-primary-400: #42a09a;
-  --color-primary-500: #2d8880; /* brand */
-  --color-primary-600: #256e68;
-  --color-primary-700: #1f5955;
-  --color-primary-800: #1b4745;
-  --color-primary-900: #193c3a;
+  /* Primary — deep forest green */
+  --color-primary-50 : #EFF4F1;
+  --color-primary-100: #D2E5DC;
+  --color-primary-200: #A3CDB9;
+  --color-primary-300: #72B496;
+  --color-primary-400: #4D9577;
+  --color-primary-500: #3B7260;
+  --color-primary-600: #3B5249; /* brand */
+  --color-primary-700: #2C3E38;
+  --color-primary-800: #1C2923;
+  --color-primary-900: #0F1814;
 
-  /* Accent — warm gold */
-  --color-accent-50 : #fdf8ee;
-  --color-accent-100: #f9ecd0;
-  --color-accent-200: #f2d79e;
-  --color-accent-300: #e9bb5e;
-  --color-accent-400: #dfa030;
-  --color-accent-500: #c98818; /* brand */
-  --color-accent-600: #a86e14;
-  --color-accent-700: #885514;
-  --color-accent-800: #6f4417;
-  --color-accent-900: #5d3918;
+  /* Accent — warm terracotta */
+  --color-accent-50 : #FCF6EF;
+  --color-accent-100: #F5E6D0;
+  --color-accent-200: #EDCAA2;
+  --color-accent-300: #E3AD73;
+  --color-accent-400: #D89A56;
+  --color-accent-500: #C4956A; /* brand */
+  --color-accent-600: #A97850;
+  --color-accent-700: #8C6040;
+  --color-accent-800: #6E4A31;
+  --color-accent-900: #513823;
 
-  /* Neutral — warm stone */
-  --color-neutral-0  : #ffffff;
-  --color-neutral-50 : #faf9f7;
-  --color-neutral-100: #f2ede8;
-  --color-neutral-200: #e4dbd2;
-  --color-neutral-300: #cfc3b6;
-  --color-neutral-400: #b3a496;
-  --color-neutral-500: #918274;
+  /* Neutral — warm sand */
+  --color-neutral-0  : #FFFFFF;
+  --color-neutral-50 : #FAF7F2;
+  --color-neutral-100: #F2EDE5;
+  --color-neutral-200: #DDD5C8;
+  --color-neutral-300: #C9BFB2;
+  --color-neutral-400: #AFA49A;
+  --color-neutral-500: #8A7E72;
   --color-neutral-600: #756758;
-  --color-neutral-700: #5e5245;
-  --color-neutral-800: #403a33;
-  --color-neutral-900: #2a251f;
-  --color-neutral-950: #1a1612;
+  --color-neutral-700: #5E5245;
+  --color-neutral-800: #403A33;
+  --color-neutral-900: #2C2C2C;
+  --color-neutral-950: #1A1612;
 
   /* Semantic aliases — what to use in components */
-  --color-bg          : var(--color-neutral-50);
-  --color-bg-subtle   : var(--color-neutral-100);
-  --color-surface     : var(--color-neutral-0);
-  --color-text        : var(--color-neutral-900);
-  --color-text-muted  : var(--color-neutral-600);
+  --color-bg          : #FAF7F2;
+  --color-bg-subtle   : #F2EDE5;
+  --color-surface     : #F2EDE5;
+  --color-text        : #2C2C2C;
+  --color-text-muted  : #8A7E72;
   --color-text-inverse: var(--color-neutral-0);
-  --color-border      : var(--color-neutral-200);
+  --color-border      : #DDD5C8;
   --color-border-strong: var(--color-neutral-300);
 
   /* Status */

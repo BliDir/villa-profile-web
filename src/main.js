@@ -1,1 +1,1 @@
-// Entry point
+import './js/nav-scroll.js';

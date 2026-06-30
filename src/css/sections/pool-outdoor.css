@@ -1,5 +1,5 @@
 #pool-outdoor {
-  background-color: var(--color-neutral-100);
+  background-color: var(--color-bg-subtle);
   padding-block: var(--space-24);
 }
 
@@ -50,12 +50,12 @@
   font-weight: var(--font-semibold);
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
-  color: var(--color-primary-500);
+  color: var(--color-accent-500);
 }
 
 .pool-outdoor__copy h2 {
   font-size: var(--text-3xl);
-  color: var(--color-neutral-900);
+  color: var(--color-primary-600);
 }
 
 .pool-outdoor__copy p {
