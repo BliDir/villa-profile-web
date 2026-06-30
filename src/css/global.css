@@ -128,25 +128,16 @@ header nav {
   font-size: var(--text-lg);
   font-weight: var(--font-bold);
   letter-spacing: var(--tracking-wide);
-  color: var(--color-neutral-0);
+  color: var(--color-primary-600);
   text-transform: uppercase;
   white-space: nowrap;
   transition: color var(--transition-fast);
 }
 
-header.is-scrolled .nav-brand {
-  color: var(--color-primary-600);
-}
-
 .nav-brand:hover,
 .nav-brand:focus-visible {
-  color: var(--color-accent-300);
-  text-decoration: none;
-}
-
-header.is-scrolled .nav-brand:hover,
-header.is-scrolled .nav-brand:focus-visible {
   color: var(--color-accent-500);
+  text-decoration: none;
 }
 
 header nav ul {
@@ -162,22 +153,12 @@ header nav ul a {
   font-weight: var(--font-medium);
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--color-text-muted);
   transition: color var(--transition-fast);
 }
 
 header nav ul a:hover,
 header nav ul a:focus-visible {
-  color: var(--color-neutral-0);
-  text-decoration: none;
-}
-
-header.is-scrolled nav ul a {
-  color: var(--color-text-muted);
-}
-
-header.is-scrolled nav ul a:hover,
-header.is-scrolled nav ul a:focus-visible {
   color: var(--color-primary-600);
   text-decoration: none;
 }

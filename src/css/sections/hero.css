@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-color: var(--color-neutral-900);
+  background-color: var(--color-bg); /* white while image loads */
 }
 
 /* ── Background image ──────────────────────────────────────────────────────── */
@@ -18,23 +18,24 @@
   object-fit: cover;
   object-position: center;
   z-index: var(--z-below);
+  opacity: 0.55; /* soften so white overlay reads cleanly */
 }
 
-/* ── Warm-toned gradient overlay ───────────────────────────────────────────── */
+/* ── White gradient overlay — left (opaque) → right (transparent) ───────────── */
 
 .hero__overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    105deg,
-    rgba(36, 36, 34, 0.70) 0%,
-    rgba(36, 36, 34, 0.38) 55%,
-    rgba(36, 36, 34, 0.16) 100%
+    to right,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(255, 255, 255, 0.80) 40%,
+    rgba(255, 255, 255, 0.20) 100%
   );
   z-index: var(--z-base);
 }
 
-/* ── Content — left-aligned, editorial ─────────────────────────────────────── */
+/* ── Content — left-aligned, dark text on white ────────────────────────────── */
 
 .hero__content {
   position: relative;
@@ -57,7 +58,7 @@
   font-weight: var(--font-semibold);
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
-  color: var(--color-accent-300);
+  color: var(--color-text-muted);
 }
 
 .hero__title {
@@ -65,7 +66,7 @@
   font-weight: var(--font-bold);
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);
-  color: var(--color-neutral-0);
+  color: var(--color-text);
   max-width: 10ch;
 }
 
@@ -73,20 +74,20 @@
   font-size: var(--text-xl);
   line-height: var(--leading-relaxed);
   font-weight: var(--font-regular);
-  color: rgba(255, 255, 255, 0.80);
+  color: var(--color-text-muted);
   max-width: 36ch;
 }
 
-/* ── CTA — outline style on dark background ────────────────────────────────── */
+/* ── CTA — filled dark on white background ─────────────────────────────────── */
 
 .hero__cta {
   display: inline-flex;
   align-items: center;
   margin-top: var(--space-3);
   padding: var(--space-4) var(--space-8);
-  background-color: transparent;
+  background-color: var(--color-text);
   color: var(--color-neutral-0);
-  border: 1.5px solid rgba(255, 255, 255, 0.70);
+  border: 1.5px solid var(--color-text);
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: var(--font-semibold);
@@ -96,21 +97,20 @@
   border-radius: var(--radius-md);
   transition:
     background-color var(--transition-fast),
-    border-color     var(--transition-fast),
-    color            var(--transition-fast);
+    border-color     var(--transition-fast);
 }
 
 .hero__cta:hover,
 .hero__cta:focus-visible {
-  background-color: var(--color-accent-500);
-  border-color: var(--color-accent-500);
+  background-color: var(--color-primary-700);
+  border-color: var(--color-primary-700);
   color: var(--color-neutral-0);
   text-decoration: none;
 }
 
 .hero__cta:active {
-  background-color: var(--color-accent-600);
-  border-color: var(--color-accent-600);
+  background-color: var(--color-primary-800);
+  border-color: var(--color-primary-800);
 }
 
 /* ── Responsive ────────────────────────────────────────────────────────────── */
@@ -126,6 +126,11 @@
 }
 
 @media (max-width: 480px) {
+  .hero__overlay {
+    /* uniform white wash on mobile so centered text reads over any image */
+    background: rgba(255, 255, 255, 0.90);
+  }
+
   .hero__content {
     align-items: center;
     text-align: center;
