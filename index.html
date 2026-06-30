@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="/src/css/global.css" />
     <link rel="stylesheet" href="/src/css/sections/hero.css" />
     <link rel="stylesheet" href="/src/css/sections/pool-outdoor.css" />
+    <link rel="stylesheet" href="/src/css/sections/interior-rooms.css" />
+    <link rel="stylesheet" href="/src/css/sections/location.css" />
+    <link rel="stylesheet" href="/src/css/sections/amenities.css" />
     <link rel="stylesheet" href="/src/css/sections/contact.css" />
 
     <title>Villa — Luxury Private Retreat</title>
@@ -150,12 +153,294 @@
       </section>
 
       <section id="interior-rooms" aria-label="Interior Rooms">
+        <div class="rooms__inner">
+
+          <div class="rooms__header">
+            <span class="rooms__eyebrow">Accommodations</span>
+            <h2>Our Rooms &amp; Spaces</h2>
+            <p>Every room is designed for comfort and elegance, blending natural materials with modern amenities.</p>
+          </div>
+
+          <!-- ── Room card grid ──────────────────────────────────────────────
+               To add a room: copy one .room-card block and update the image
+               src, alt, name, and description.
+               To remove a room: delete the .room-card block.
+               Recommended image size: 900 × 600 px (3:2 ratio).
+          ──────────────────────────────────────────────────────────────────── -->
+          <div class="rooms__grid">
+
+            <!-- SWAP: /images/rooms/master-suite.jpg -->
+            <article class="room-card">
+              <div class="room-card__image">
+                <img src="/images/rooms/master-suite.jpg" alt="Master suite with king bed and garden view" width="900" height="600" loading="lazy" />
+              </div>
+              <div class="room-card__body">
+                <h3 class="room-card__name">Master Suite</h3>
+                <p class="room-card__desc">A spacious king bedroom with en-suite bath, private terrace, and sweeping garden views.</p>
+              </div>
+            </article>
+
+            <!-- SWAP: /images/rooms/bedroom-2.jpg -->
+            <article class="room-card">
+              <div class="room-card__image">
+                <img src="/images/rooms/bedroom-2.jpg" alt="Second bedroom with twin beds" width="900" height="600" loading="lazy" />
+              </div>
+              <div class="room-card__body">
+                <h3 class="room-card__name">Bedroom Two</h3>
+                <p class="room-card__desc">Twin beds that convert to a king, with a dedicated work nook and garden-facing window.</p>
+              </div>
+            </article>
+
+            <!-- SWAP: /images/rooms/bedroom-3.jpg -->
+            <article class="room-card">
+              <div class="room-card__image">
+                <img src="/images/rooms/bedroom-3.jpg" alt="Third bedroom with queen bed" width="900" height="600" loading="lazy" />
+              </div>
+              <div class="room-card__body">
+                <h3 class="room-card__name">Bedroom Three</h3>
+                <p class="room-card__desc">A cosy queen room bathed in morning light, with built-in wardrobe and pool view.</p>
+              </div>
+            </article>
+
+            <!-- SWAP: /images/rooms/living-room.jpg -->
+            <article class="room-card">
+              <div class="room-card__image">
+                <img src="/images/rooms/living-room.jpg" alt="Open-plan living and dining area" width="900" height="600" loading="lazy" />
+              </div>
+              <div class="room-card__body">
+                <h3 class="room-card__name">Living &amp; Dining</h3>
+                <p class="room-card__desc">An open-plan lounge and dining area that flows onto the pool terrace through folding glass doors.</p>
+              </div>
+            </article>
+
+            <!-- SWAP: /images/rooms/kitchen.jpg -->
+            <article class="room-card">
+              <div class="room-card__image">
+                <img src="/images/rooms/kitchen.jpg" alt="Fully equipped villa kitchen" width="900" height="600" loading="lazy" />
+              </div>
+              <div class="room-card__body">
+                <h3 class="room-card__name">Kitchen</h3>
+                <p class="room-card__desc">Fully equipped with a gas range, espresso machine, and everything you need for long, lazy breakfasts.</p>
+              </div>
+            </article>
+
+            <!-- SWAP: /images/rooms/bathroom.jpg -->
+            <article class="room-card">
+              <div class="room-card__image">
+                <img src="/images/rooms/bathroom.jpg" alt="Open-air bathroom with soaking tub" width="900" height="600" loading="lazy" />
+              </div>
+              <div class="room-card__body">
+                <h3 class="room-card__name">Outdoor Bathroom</h3>
+                <p class="room-card__desc">A semi-open bathroom with a deep soaking tub, rain shower, and tropical garden privacy wall.</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
       </section>
 
       <section id="location" aria-label="Location">
+        <div class="location__inner">
+
+          <div class="location__header">
+            <span class="location__eyebrow">Where We Are</span>
+            <h2>Location &amp; Surroundings</h2>
+            <!-- SWAP: update this paragraph to describe your villa's actual location -->
+            <p>
+              Nestled in the lush hillside of Canggu, Bali — just minutes from the beach yet
+              worlds away from the crowds. The perfect base for exploring the island's best
+              surf breaks, rice terraces, and dining.
+            </p>
+          </div>
+
+          <div class="location__body">
+
+            <!-- ── Google Maps embed ──────────────────────────────────────────
+                 SWAP: to update the map location, replace the coordinates in
+                 the src URL below:
+                   q=-8.3405,115.0920  →  q=[LATITUDE],[LONGITUDE]
+                 Find your coordinates on Google Maps by right-clicking the pin.
+                 The zoom level (z=15) can be adjusted from 1 (world) to 21 (street).
+            ──────────────────────────────────────────────────────────────────── -->
+            <div class="location__map">
+              <iframe
+                src="https://maps.google.com/maps?q=-8.3405,115.0920&z=15&output=embed"
+                title="Villa location on Google Maps"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+            <!-- ── What's Nearby ──────────────────────────────────────────────
+                 SWAP: update each .nearby-item__label and .nearby-item__distance
+                 to match your villa's actual surroundings.
+                 To add an item: copy one <li class="nearby-item"> block.
+                 To remove: delete the <li> block.
+            ──────────────────────────────────────────────────────────────────── -->
+            <div class="location__nearby">
+              <h3>What's Nearby</h3>
+              <ul class="nearby-list">
+
+                <li class="nearby-item">
+                  <span class="nearby-item__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </span>
+                  <div class="nearby-item__text">
+                    <span class="nearby-item__label">Beach</span>
+                    <span class="nearby-item__distance">5 min drive</span>
+                  </div>
+                </li>
+
+                <li class="nearby-item">
+                  <span class="nearby-item__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21 4 21 4s-2 0-3.5 1.5L14 9 5.8 7.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 3.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+                  </span>
+                  <div class="nearby-item__text">
+                    <span class="nearby-item__label">Airport</span>
+                    <span class="nearby-item__distance">30 min drive</span>
+                  </div>
+                </li>
+
+                <li class="nearby-item">
+                  <span class="nearby-item__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                  </span>
+                  <div class="nearby-item__text">
+                    <span class="nearby-item__label">Town Centre</span>
+                    <span class="nearby-item__distance">10 min drive</span>
+                  </div>
+                </li>
+
+                <li class="nearby-item">
+                  <span class="nearby-item__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+                  </span>
+                  <div class="nearby-item__text">
+                    <span class="nearby-item__label">Restaurants</span>
+                    <span class="nearby-item__distance">2 min walk</span>
+                  </div>
+                </li>
+
+                <li class="nearby-item">
+                  <span class="nearby-item__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                  </span>
+                  <div class="nearby-item__text">
+                    <span class="nearby-item__label">Supermarket</span>
+                    <span class="nearby-item__distance">5 min drive</span>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="amenities" aria-label="Amenities">
+        <div class="amenities__inner">
+
+          <div class="amenities__header">
+            <span class="amenities__eyebrow">Facilities</span>
+            <h2>Amenities &amp; Facilities</h2>
+            <p>Everything you need for a seamless stay — nothing you don't.</p>
+          </div>
+
+          <!-- ── Amenity icon grid ───────────────────────────────────────────
+               To add an amenity: copy one .amenity-item and update the SVG
+               icon and .amenity-item__label text.
+               To remove: delete the .amenity-item element.
+               Icons use 24×24 Lucide-style strokes (stroke-width 2).
+          ──────────────────────────────────────────────────────────────────── -->
+          <ul class="amenities__grid">
+
+            <li class="amenity-item">
+              <span class="amenity-item__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12c0-5.5 4.5-10 10-10s10 4.5 10 10M2 12c0 5.5 4.5 10 10 10s10-4.5 10-10"/></svg>
+              </span>
+              <span class="amenity-item__label">Private Pool</span>
+            </li>
+
+            <li class="amenity-item">
+              <span class="amenity-item__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+              </span>
+              <span class="amenity-item__label">Fast WiFi</span>
+            </li>
+
+            <li class="amenity-item">
+              <span class="amenity-item__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+              </span>
+              <span class="amenity-item__label">Air Conditioning</span>
+            </li>
+
+            <li class="amenity-item">
+              <span class="amenity-item__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V12a9 9 0 1 1 18 0v10"/><path d="M3 22h18"/><path d="M12 22V12"/></svg>
+              </span>
+              <span class="amenity-item__label">Full Kitchen</span>
+            </li>
+
+            <li class="amenity-item">
+              <span class="amenity-item__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </span>
+              <span class="amenity-item__label">Parking</span>
+            </li>
+
+            <li class="amenity-item">
+              <span class="amenity-item__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+              </span>
+              <span class="amenity-item__label">BBQ Grill</span>
+            </li>
+
+            <li class="amenity-item">
+              <span class="amenity-item__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12m0 0C12 6 7 3 7 3s-1 6 5 9zm0 0c0-6 5-9 5-9s1 6-5 9z"/></svg>
+              </span>
+              <span class="amenity-item__label">Outdoor Shower</span>
+            </li>
+
+            <li class="amenity-item">
+              <span class="amenity-item__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </span>
+              <span class="amenity-item__label">Smart TV</span>
+            </li>
+
+            <li class="amenity-item">
+              <span class="amenity-item__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"/><path d="M12 8v4l3 3"/></svg>
+              </span>
+              <span class="amenity-item__label">Washing Machine</span>
+            </li>
+
+            <li class="amenity-item">
+              <span class="amenity-item__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M2 21h20"/><path d="M8 21v-6h8v6"/></svg>
+              </span>
+              <span class="amenity-item__label">Hot Water</span>
+            </li>
+
+            <li class="amenity-item">
+              <span class="amenity-item__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </span>
+              <span class="amenity-item__label">Towels &amp; Linens</span>
+            </li>
+
+            <li class="amenity-item">
+              <span class="amenity-item__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </span>
+              <span class="amenity-item__label">Daily Housekeeping</span>
+            </li>
+
+          </ul>
+        </div>
       </section>
 
       <section id="contact" aria-label="Contact">
