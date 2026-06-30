@@ -10,7 +10,7 @@ const galleryImgs = Array.from(
   document.querySelectorAll(GALLERY_SELECTORS.join(', '))
 );
 
-if (galleryImgs.length === 0) return;
+if (galleryImgs.length > 0) {
 
 // ── Build lightbox DOM ────────────────────────────────────────────────────────
 
@@ -109,3 +109,5 @@ lightbox.addEventListener('touchend', e => {
   const delta = touchStartX - e.changedTouches[0].clientX;
   if (Math.abs(delta) > 50) show(currentIndex + (delta > 0 ? 1 : -1));
 }, { passive: true });
+
+} // end: if (galleryImgs.length > 0)

@@ -7,15 +7,15 @@
 @media (prefers-reduced-motion: no-preference) {
   [data-animate] {
     opacity: 0;
-    transform: translateY(24px);
+    translate: 0 24px;
     transition:
       opacity  var(--transition-slow),
-      transform var(--transition-slow);
+      translate var(--transition-slow);
   }
 
   [data-animate].is-visible {
     opacity: 1;
-    transform: translateY(0);
+    translate: 0 0;
   }
 
   /* Stagger delays for grid children */
