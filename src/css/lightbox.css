@@ -1,0 +1,109 @@
+/* ── Lightbox overlay (DAI-94) ─────────────────────────────────────────────── */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+}
+
+.lightbox.is-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.92);
+  cursor: zoom-out;
+}
+
+.lightbox__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  max-width: 90vw;
+  max-height: 90vh;
+  padding: var(--space-4);
+}
+
+.lightbox__img {
+  display: block;
+  max-width: 80vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2xl);
+}
+
+/* ── Controls ──────────────────────────────────────────────────────────────── */
+
+.lightbox__close,
+.lightbox__prev,
+.lightbox__next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-neutral-0);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.lightbox__close:hover,
+.lightbox__prev:hover,
+.lightbox__next:hover,
+.lightbox__close:focus-visible,
+.lightbox__prev:focus-visible,
+.lightbox__next:focus-visible {
+  background-color: rgba(255, 255, 255, 0.24);
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  font-size: var(--text-xl);
+  line-height: 1;
+}
+
+.lightbox__prev,
+.lightbox__next {
+  width: 48px;
+  height: 48px;
+  font-size: var(--text-2xl);
+}
+
+/* ── Make lightbox-registered figures feel interactive ─────────────────────── */
+
+.lightbox-trigger {
+  cursor: zoom-in;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .lightbox__prev,
+  .lightbox__next {
+    width: 36px;
+    height: 36px;
+    font-size: var(--text-lg);
+  }
+
+  .lightbox__img {
+    max-width: 95vw;
+  }
+}
