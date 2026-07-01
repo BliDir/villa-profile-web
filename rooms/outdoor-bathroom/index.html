@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Outdoor Bathroom — a semi-open retreat with soaking tub, rain shower, and tropical garden privacy." />
+    <meta name="description" data-i18n-content="meta.desc_outdoor_bathroom" content="Outdoor Bathroom — a semi-open retreat with soaking tub, rain shower, and tropical garden privacy." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/src/css/animations.css" />
     <link rel="stylesheet" href="/src/css/lightbox.css" />
 
-    <title>Outdoor Bathroom — Villa</title>
+    <title data-i18n="meta.title_outdoor_bathroom">Outdoor Bathroom — Villa</title>
   </head>
   <body>
 
@@ -28,13 +28,17 @@
           <span class="nav-toggle__bar"></span>
         </button>
         <ul id="nav-list">
-          <li><a href="/">Home</a></li>
-          <li><a href="/#pool-outdoor">Pool &amp; Outdoor</a></li>
-          <li><a href="/#interior-rooms">Rooms</a></li>
-          <li><a href="/#location">Location</a></li>
-          <li><a href="/#amenities">Amenities</a></li>
-          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/" data-i18n="nav.home">Home</a></li>
+          <li><a href="/#pool-outdoor" data-i18n="nav.pool_outdoor">Pool &amp; Outdoor</a></li>
+          <li><a href="/#interior-rooms" data-i18n="nav.rooms">Rooms</a></li>
+          <li><a href="/#location" data-i18n="nav.location">Location</a></li>
+          <li><a href="/#amenities" data-i18n="nav.amenities">Amenities</a></li>
+          <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
+        <div class="lang-switcher" aria-label="Select language">
+          <button class="lang-switcher__option is-active" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-switcher__option" data-lang="id" aria-pressed="false">ID</button>
+        </div>
       </nav>
     </header>
 
@@ -43,8 +47,8 @@
       <nav class="room-detail__breadcrumb" aria-label="Breadcrumb">
         <ol>
           <li><a href="/">Villa</a></li>
-          <li><a href="/#interior-rooms">Rooms</a></li>
-          <li aria-current="page">Outdoor Bathroom</li>
+          <li><a href="/#interior-rooms" data-i18n="room_detail.breadcrumb_rooms">Rooms</a></li>
+          <li aria-current="page" data-i18n="rooms.outdoor_bathroom.eyebrow">Outdoor Bathroom</li>
         </ol>
       </nav>
 
@@ -58,28 +62,28 @@
           fetchpriority="high"
         />
         <div class="room-detail__hero-caption">
-          <span class="room-detail__eyebrow">Outdoor Bathroom</span>
-          <h1 class="room-detail__title"><em>A Ritual, Not Just a Shower</em></h1>
+          <span class="room-detail__eyebrow" data-i18n="rooms.outdoor_bathroom.eyebrow">Outdoor Bathroom</span>
+          <h1 class="room-detail__title"><em data-i18n="rooms.outdoor_bathroom.title">A Ritual, Not Just a Shower</em></h1>
         </div>
       </section>
 
       <div class="room-detail__specs-bar">
         <dl class="room-detail__specs">
           <div class="room-detail__spec">
-            <dt>Tub</dt>
-            <dd>Soaking</dd>
+            <dt data-i18n="specs.tub">Tub</dt>
+            <dd data-i18n="rooms.outdoor_bathroom.tub_val">Soaking</dd>
           </div>
           <div class="room-detail__spec">
-            <dt>Shower</dt>
-            <dd>Rain</dd>
+            <dt data-i18n="specs.shower">Shower</dt>
+            <dd data-i18n="rooms.outdoor_bathroom.shower_val">Rain</dd>
           </div>
           <div class="room-detail__spec">
-            <dt>Size</dt>
-            <dd>25 m²</dd>
+            <dt data-i18n="specs.size">Size</dt>
+            <dd data-i18n="rooms.outdoor_bathroom.size_val">25 m²</dd>
           </div>
           <div class="room-detail__spec">
-            <dt>Setting</dt>
-            <dd>Open-air</dd>
+            <dt data-i18n="specs.setting">Setting</dt>
+            <dd data-i18n="rooms.outdoor_bathroom.setting_val">Open-air</dd>
           </div>
         </dl>
       </div>
@@ -110,23 +114,23 @@
       <section class="room-detail__content">
 
         <div class="room-detail__description" data-animate>
-          <span class="room-detail__section-eyebrow">About This Space</span>
-          <h2>Bathing Under Open Sky</h2>
-          <p>
+          <span class="room-detail__section-eyebrow" data-i18n="room_detail.about_space">About This Space</span>
+          <h2 data-i18n="rooms.outdoor_bathroom.about_heading">Bathing Under Open Sky</h2>
+          <p data-i18n="rooms.outdoor_bathroom.p1">
             The outdoor bathroom is the villa's most unconventional space — and,
             for many guests, its most memorable. A deep stone soaking tub sits
             at the centre of a semi-open room, shielded from view by a living wall
             of bamboo and banana palms that filter the light and absorb the sounds
             of the outside world.
           </p>
-          <p>
+          <p data-i18n="rooms.outdoor_bathroom.p2">
             A generous rain shower occupies one corner, fed by a wide overhead
             head that turns rinsing off into something worth staying under. The
             stone basin is paired with a timber shelf stocked with organic
             coconut-based toiletries — shampoo, conditioner, body wash, and a
             bar soap made locally. Nothing is in plastic.
           </p>
-          <p>
+          <p data-i18n="rooms.outdoor_bathroom.p3">
             The space is designed to slow you down. Thick cotton towels and a
             folded bathrobe wait on the stone bench. A candle holder sits beside
             the tub. There is no speaker, no phone shelf, no rush. Just open
@@ -135,39 +139,39 @@
         </div>
 
         <div class="room-detail__facilities" data-animate data-animate-delay="1">
-          <h3>Facilities</h3>
+          <h3 data-i18n="room_detail.facilities">Facilities</h3>
           <ul>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M4 12a2 2 0 0 1-2-2V6h20v4a2 2 0 0 1-2 2M6 12v5a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-5"/></svg>
-              Deep soaking tub
+              <span data-i18n="rooms.outdoor_bathroom.f1">Deep soaking tub</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v6m0 0c-2 0-4 1-4 3H6a2 2 0 0 0-2 2v7h16v-7a2 2 0 0 0-2-2h-2c0-2-2-3-4-3z"/><line x1="6" y1="22" x2="6" y2="19"/><line x1="18" y1="22" x2="18" y2="19"/></svg>
-              Rain shower
+              <span data-i18n="rooms.outdoor_bathroom.f2">Rain shower</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V12m0 0C12 6 7 3 7 3s-1 6 5 9zm0 0c0-6 5-9 5-9s1 6-5 9z"/></svg>
-              Living garden privacy wall
+              <span data-i18n="rooms.outdoor_bathroom.f3">Living garden privacy wall</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-              Open-air setting
+              <span data-i18n="rooms.outdoor_bathroom.f4">Open-air setting</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Organic coconut toiletries
+              <span data-i18n="rooms.outdoor_bathroom.f5">Organic coconut toiletries</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Bathrobe &amp; luxury towels
+              <span data-i18n="rooms.outdoor_bathroom.f6">Bathrobe &amp; luxury towels</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Stone basin &amp; timber shelf
+              <span data-i18n="rooms.outdoor_bathroom.f7">Stone basin &amp; timber shelf</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Hairdryer (available on request)
+              <span data-i18n="rooms.outdoor_bathroom.f8">Hairdryer (available on request)</span>
             </li>
           </ul>
         </div>
@@ -175,21 +179,21 @@
       </section>
 
       <section class="room-detail__cta-section" aria-label="Book the villa">
-        <h2>Ready to Make It Yours?</h2>
-        <p>Reach out and we'll take care of everything — from arrival to departure.</p>
+        <h2 data-i18n="room_detail.cta_heading">Ready to Make It Yours?</h2>
+        <p data-i18n="room_detail.cta_sub">Reach out and we'll take care of everything — from arrival to departure.</p>
         <a href="/#contact" class="room-detail__book-btn">
-          Enquire Now <span aria-hidden="true">→</span>
+          <span data-i18n="room_detail.cta_btn">Enquire Now</span> <span aria-hidden="true">→</span>
         </a>
       </section>
 
       <nav class="room-detail__room-nav" aria-label="Room navigation">
         <a href="/rooms/kitchen/" class="room-detail__prev">
-          <span class="room-nav__label">← Previous</span>
-          <span class="room-nav__name">Kitchen</span>
+          <span class="room-nav__label" data-i18n="room_detail.nav_prev">← Previous</span>
+          <span class="room-nav__name" data-i18n="rooms.outdoor_bathroom.prev">Kitchen</span>
         </a>
         <a href="/rooms/master-suite/" class="room-detail__next">
-          <span class="room-nav__label">Next →</span>
-          <span class="room-nav__name">Master Suite</span>
+          <span class="room-nav__label" data-i18n="room_detail.nav_next">Next →</span>
+          <span class="room-nav__name" data-i18n="rooms.outdoor_bathroom.next">Master Suite</span>
         </a>
       </nav>
 
@@ -198,12 +202,12 @@
     <footer>
       <div class="footer__inner">
         <span class="footer__name">Villa</span>
-        <p class="footer__copy">&copy; 2025 Villa. All rights reserved.</p>
+        <p class="footer__copy" data-i18n="footer.copy">&copy; 2026 Villa. All rights reserved.</p>
       </div>
     </footer>
 
     <div class="room-detail__sticky-cta" aria-hidden="true">
-      <a href="/#contact" tabindex="-1">Book This Room</a>
+      <a href="/#contact" tabindex="-1" data-i18n="room_detail.book_sticky">Book This Room</a>
     </div>
 
     <script type="module" src="/src/js/main-room.js"></script>

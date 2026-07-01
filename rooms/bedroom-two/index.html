@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Bedroom Two — twin beds that convert to a king, with a work nook and garden views." />
+    <meta name="description" data-i18n-content="meta.desc_bedroom_two" content="Bedroom Two — twin beds that convert to a king, with a work nook and garden views." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/src/css/animations.css" />
     <link rel="stylesheet" href="/src/css/lightbox.css" />
 
-    <title>Bedroom Two — Villa</title>
+    <title data-i18n="meta.title_bedroom_two">Bedroom Two — Villa</title>
   </head>
   <body>
 
@@ -28,13 +28,17 @@
           <span class="nav-toggle__bar"></span>
         </button>
         <ul id="nav-list">
-          <li><a href="/">Home</a></li>
-          <li><a href="/#pool-outdoor">Pool &amp; Outdoor</a></li>
-          <li><a href="/#interior-rooms">Rooms</a></li>
-          <li><a href="/#location">Location</a></li>
-          <li><a href="/#amenities">Amenities</a></li>
-          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/" data-i18n="nav.home">Home</a></li>
+          <li><a href="/#pool-outdoor" data-i18n="nav.pool_outdoor">Pool &amp; Outdoor</a></li>
+          <li><a href="/#interior-rooms" data-i18n="nav.rooms">Rooms</a></li>
+          <li><a href="/#location" data-i18n="nav.location">Location</a></li>
+          <li><a href="/#amenities" data-i18n="nav.amenities">Amenities</a></li>
+          <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
+        <div class="lang-switcher" aria-label="Select language">
+          <button class="lang-switcher__option is-active" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-switcher__option" data-lang="id" aria-pressed="false">ID</button>
+        </div>
       </nav>
     </header>
 
@@ -43,8 +47,8 @@
       <nav class="room-detail__breadcrumb" aria-label="Breadcrumb">
         <ol>
           <li><a href="/">Villa</a></li>
-          <li><a href="/#interior-rooms">Rooms</a></li>
-          <li aria-current="page">Bedroom Two</li>
+          <li><a href="/#interior-rooms" data-i18n="room_detail.breadcrumb_rooms">Rooms</a></li>
+          <li aria-current="page" data-i18n="rooms.bedroom_two.eyebrow">Bedroom Two</li>
         </ol>
       </nav>
 
@@ -58,28 +62,28 @@
           fetchpriority="high"
         />
         <div class="room-detail__hero-caption">
-          <span class="room-detail__eyebrow">Bedroom Two</span>
-          <h1 class="room-detail__title"><em>A Room to Breathe</em></h1>
+          <span class="room-detail__eyebrow" data-i18n="rooms.bedroom_two.eyebrow">Bedroom Two</span>
+          <h1 class="room-detail__title"><em data-i18n="rooms.bedroom_two.title">A Room to Breathe</em></h1>
         </div>
       </section>
 
       <div class="room-detail__specs-bar">
         <dl class="room-detail__specs">
           <div class="room-detail__spec">
-            <dt>Bed</dt>
-            <dd>Twin / King</dd>
+            <dt data-i18n="specs.bed">Bed</dt>
+            <dd data-i18n="rooms.bedroom_two.bed_val">Twin / King</dd>
           </div>
           <div class="room-detail__spec">
-            <dt>Guests</dt>
-            <dd>2</dd>
+            <dt data-i18n="specs.guests">Guests</dt>
+            <dd data-i18n="rooms.bedroom_two.guests_val">2</dd>
           </div>
           <div class="room-detail__spec">
-            <dt>Size</dt>
-            <dd>30 m²</dd>
+            <dt data-i18n="specs.size">Size</dt>
+            <dd data-i18n="rooms.bedroom_two.size_val">30 m²</dd>
           </div>
           <div class="room-detail__spec">
-            <dt>View</dt>
-            <dd>Garden</dd>
+            <dt data-i18n="specs.view">View</dt>
+            <dd data-i18n="rooms.bedroom_two.view_val">Garden</dd>
           </div>
         </dl>
       </div>
@@ -110,22 +114,22 @@
       <section class="room-detail__content">
 
         <div class="room-detail__description" data-animate>
-          <span class="room-detail__section-eyebrow">About This Room</span>
-          <h2>Versatile, Considered, Calm</h2>
-          <p>
+          <span class="room-detail__section-eyebrow" data-i18n="room_detail.about">About This Room</span>
+          <h2 data-i18n="rooms.bedroom_two.about_heading">Versatile, Considered, Calm</h2>
+          <p data-i18n="rooms.bedroom_two.p1">
             Bedroom Two is designed for flexibility and focus. Two single beds can be
             configured as a king at your request — ideal for couples or a pair of
             close friends who each want their own space. The room sits at the quieter
             end of the villa, shielded from the pool, and catches morning light through
             its garden-facing window from first light to midday.
           </p>
-          <p>
+          <p data-i18n="rooms.bedroom_two.p2">
             A dedicated work nook with a solid timber desk and ergonomic chair makes
             this one of the few rooms in the villa suited to those who need to get
             something done. Fast WiFi reaches every corner, and the desk lamp is
             warm enough for late-night reading without disturbing a sleeping partner.
           </p>
-          <p>
+          <p data-i18n="rooms.bedroom_two.p3">
             The en-suite shower room is compact but beautifully finished in natural
             stone, with a generous rain-head and quality toiletries. A built-in
             wardrobe and full-length mirror complete a room that gives you everything
@@ -134,47 +138,47 @@
         </div>
 
         <div class="room-detail__facilities" data-animate data-animate-delay="1">
-          <h3>Facilities</h3>
+          <h3 data-i18n="room_detail.facilities">Facilities</h3>
           <ul>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10H2"/><path d="M6 8V4"/></svg>
-              Twin beds (convert to king)
+              <span data-i18n="rooms.bedroom_two.f1">Twin beds (convert to king)</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M4 12a2 2 0 0 1-2-2V6h20v4a2 2 0 0 1-2 2M6 12v5a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-5"/></svg>
-              En-suite shower room
+              <span data-i18n="rooms.bedroom_two.f2">En-suite shower room</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-              Work desk &amp; chair
+              <span data-i18n="rooms.bedroom_two.f3">Work desk &amp; chair</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              Garden view
+              <span data-i18n="rooms.bedroom_two.f4">Garden view</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 10 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
-              Air conditioning
+              <span data-i18n="rooms.bedroom_two.f5">Air conditioning</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg>
-              Smart TV
+              <span data-i18n="rooms.bedroom_two.f6">Smart TV</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-              High-speed WiFi
+              <span data-i18n="rooms.bedroom_two.f7">High-speed WiFi</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
-              In-room safe
+              <span data-i18n="rooms.bedroom_two.f8">In-room safe</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Bathrobe &amp; toiletries
+              <span data-i18n="rooms.bedroom_two.f9">Bathrobe &amp; toiletries</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Hairdryer
+              <span data-i18n="rooms.bedroom_two.f10">Hairdryer</span>
             </li>
           </ul>
         </div>
@@ -182,21 +186,21 @@
       </section>
 
       <section class="room-detail__cta-section" aria-label="Book this room">
-        <h2>Ready to Make It Yours?</h2>
-        <p>Reach out and we'll take care of everything — from arrival to departure.</p>
+        <h2 data-i18n="room_detail.cta_heading">Ready to Make It Yours?</h2>
+        <p data-i18n="room_detail.cta_sub">Reach out and we'll take care of everything — from arrival to departure.</p>
         <a href="/#contact" class="room-detail__book-btn">
-          Enquire Now <span aria-hidden="true">→</span>
+          <span data-i18n="room_detail.cta_btn">Enquire Now</span> <span aria-hidden="true">→</span>
         </a>
       </section>
 
       <nav class="room-detail__room-nav" aria-label="Room navigation">
         <a href="/rooms/master-suite/" class="room-detail__prev">
-          <span class="room-nav__label">← Previous</span>
-          <span class="room-nav__name">Master Suite</span>
+          <span class="room-nav__label" data-i18n="room_detail.nav_prev">← Previous</span>
+          <span class="room-nav__name" data-i18n="rooms.bedroom_two.prev">Master Suite</span>
         </a>
         <a href="/rooms/bedroom-three/" class="room-detail__next">
-          <span class="room-nav__label">Next →</span>
-          <span class="room-nav__name">Bedroom Three</span>
+          <span class="room-nav__label" data-i18n="room_detail.nav_next">Next →</span>
+          <span class="room-nav__name" data-i18n="rooms.bedroom_two.next">Bedroom Three</span>
         </a>
       </nav>
 
@@ -205,12 +209,12 @@
     <footer>
       <div class="footer__inner">
         <span class="footer__name">Villa</span>
-        <p class="footer__copy">&copy; 2025 Villa. All rights reserved.</p>
+        <p class="footer__copy" data-i18n="footer.copy">&copy; 2026 Villa. All rights reserved.</p>
       </div>
     </footer>
 
     <div class="room-detail__sticky-cta" aria-hidden="true">
-      <a href="/#contact" tabindex="-1">Book This Room</a>
+      <a href="/#contact" tabindex="-1" data-i18n="room_detail.book_sticky">Book This Room</a>
     </div>
 
     <script type="module" src="/src/js/main-room.js"></script>
