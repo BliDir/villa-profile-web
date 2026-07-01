@@ -7,54 +7,54 @@
 
 :root {
 
-  /* ── Color palette ─────────────────────────────────────────────────────── */
+  /* ── Color palette — white-based, warm gray ────────────────────────────── */
 
-  /* Primary — deep tropical teal */
-  --color-primary-50 : #f0f8f7;
-  --color-primary-100: #d4eeeb;
-  --color-primary-200: #aadcd7;
-  --color-primary-300: #72c2bc;
-  --color-primary-400: #42a09a;
-  --color-primary-500: #2d8880; /* brand */
-  --color-primary-600: #256e68;
-  --color-primary-700: #1f5955;
-  --color-primary-800: #1b4745;
-  --color-primary-900: #193c3a;
+  /* Primary — warm gray (headings, nav, interactive) */
+  --color-primary-50 : #F7F7F5;
+  --color-primary-100: #EFEFEC;
+  --color-primary-200: #E2E1DC;
+  --color-primary-300: #CCCBC5;
+  --color-primary-400: #AEADA7;
+  --color-primary-500: #8A8983;
+  --color-primary-600: #66645F; /* brand — readable on white */
+  --color-primary-700: #4E4D49;
+  --color-primary-800: #373735; /* dark section background */
+  --color-primary-900: #242422;
 
-  /* Accent — warm gold */
-  --color-accent-50 : #fdf8ee;
-  --color-accent-100: #f9ecd0;
-  --color-accent-200: #f2d79e;
-  --color-accent-300: #e9bb5e;
-  --color-accent-400: #dfa030;
-  --color-accent-500: #c98818; /* brand */
-  --color-accent-600: #a86e14;
-  --color-accent-700: #885514;
-  --color-accent-800: #6f4417;
-  --color-accent-900: #5d3918;
+  /* Accent — same warm gray scale */
+  --color-accent-50 : #F7F7F5;
+  --color-accent-100: #EFEFEC;
+  --color-accent-200: #E2E1DC;
+  --color-accent-300: #CCCBC5;
+  --color-accent-400: #AEADA7;
+  --color-accent-500: #8A8983;
+  --color-accent-600: #66645F;
+  --color-accent-700: #4E4D49;
+  --color-accent-800: #373735;
+  --color-accent-900: #242422;
 
-  /* Neutral — warm stone */
-  --color-neutral-0  : #ffffff;
-  --color-neutral-50 : #faf9f7;
-  --color-neutral-100: #f2ede8;
-  --color-neutral-200: #e4dbd2;
-  --color-neutral-300: #cfc3b6;
-  --color-neutral-400: #b3a496;
-  --color-neutral-500: #918274;
-  --color-neutral-600: #756758;
-  --color-neutral-700: #5e5245;
-  --color-neutral-800: #403a33;
-  --color-neutral-900: #2a251f;
-  --color-neutral-950: #1a1612;
+  /* Neutral — pure white base */
+  --color-neutral-0  : #FFFFFF;
+  --color-neutral-50 : #FAFAF9;
+  --color-neutral-100: #F5F4F2;
+  --color-neutral-200: #ECEAE6;
+  --color-neutral-300: #D8D6D0;
+  --color-neutral-400: #B8B6B0;
+  --color-neutral-500: #8E8D87;
+  --color-neutral-600: #6C6B65;
+  --color-neutral-700: #515050;
+  --color-neutral-800: #373735;
+  --color-neutral-900: #242422;
+  --color-neutral-950: #151513;
 
-  /* Semantic aliases — what to use in components */
-  --color-bg          : var(--color-neutral-50);
-  --color-bg-subtle   : var(--color-neutral-100);
-  --color-surface     : var(--color-neutral-0);
-  --color-text        : var(--color-neutral-900);
-  --color-text-muted  : var(--color-neutral-600);
+  /* Semantic aliases */
+  --color-bg          : #FFFFFF;
+  --color-bg-subtle   : #FAFAF9;
+  --color-surface     : #FFFFFF;
+  --color-text        : #3C3C3A;  /* warm charcoal — not harsh black */
+  --color-text-muted  : #8E8D87;  /* medium warm gray */
   --color-text-inverse: var(--color-neutral-0);
-  --color-border      : var(--color-neutral-200);
+  --color-border      : #ECEAE6;  /* barely visible */
   --color-border-strong: var(--color-neutral-300);
 
   /* Status */
@@ -64,38 +64,33 @@
 
   /* ── Typography ────────────────────────────────────────────────────────── */
 
-  /* Families */
   --font-display: 'Playfair Display', 'Georgia', serif;
   --font-body   : 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono   : 'JetBrains Mono', 'Courier New', monospace;
 
-  /* Size scale (1rem = 16px) */
-  --text-xs  : 0.75rem;   /* 12px */
-  --text-sm  : 0.875rem;  /* 14px */
-  --text-base: 1rem;      /* 16px */
-  --text-md  : 1.125rem;  /* 18px */
-  --text-lg  : 1.25rem;   /* 20px */
-  --text-xl  : 1.5rem;    /* 24px */
-  --text-2xl : 1.875rem;  /* 30px */
-  --text-3xl : 2.25rem;   /* 36px */
-  --text-4xl : 3rem;      /* 48px */
-  --text-5xl : 3.75rem;   /* 60px */
-  --text-6xl : 4.5rem;    /* 72px */
+  --text-xs  : 0.75rem;
+  --text-sm  : 0.875rem;
+  --text-base: 1rem;
+  --text-md  : 1.125rem;
+  --text-lg  : 1.25rem;
+  --text-xl  : 1.5rem;
+  --text-2xl : 1.875rem;
+  --text-3xl : 2.25rem;
+  --text-4xl : 3rem;
+  --text-5xl : 3.75rem;
+  --text-6xl : 4.5rem;
 
-  /* Weights */
   --font-regular : 400;
   --font-medium  : 500;
   --font-semibold: 600;
   --font-bold    : 700;
 
-  /* Line heights */
   --leading-tight  : 1.1;
   --leading-snug   : 1.25;
   --leading-normal : 1.5;
   --leading-relaxed: 1.625;
   --leading-loose  : 2;
 
-  /* Letter spacing */
   --tracking-tight  : -0.02em;
   --tracking-normal :  0em;
   --tracking-wide   :  0.05em;
@@ -105,38 +100,38 @@
 
   /* ── Spacing (4 px base grid) ──────────────────────────────────────────── */
 
-  --space-1 : 0.25rem;  /*  4px */
-  --space-2 : 0.5rem;   /*  8px */
-  --space-3 : 0.75rem;  /* 12px */
-  --space-4 : 1rem;     /* 16px */
-  --space-5 : 1.25rem;  /* 20px */
-  --space-6 : 1.5rem;   /* 24px */
-  --space-8 : 2rem;     /* 32px */
-  --space-10: 2.5rem;   /* 40px */
-  --space-12: 3rem;     /* 48px */
-  --space-16: 4rem;     /* 64px */
-  --space-20: 5rem;     /* 80px */
-  --space-24: 6rem;     /* 96px */
-  --space-32: 8rem;     /* 128px */
+  --space-1 : 0.25rem;
+  --space-2 : 0.5rem;
+  --space-3 : 0.75rem;
+  --space-4 : 1rem;
+  --space-5 : 1.25rem;
+  --space-6 : 1.5rem;
+  --space-8 : 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
 
 
   /* ── Border radius ─────────────────────────────────────────────────────── */
 
-  --radius-sm  : 0.25rem;  /*  4px */
-  --radius-md  : 0.5rem;   /*  8px */
-  --radius-lg  : 0.75rem;  /* 12px */
-  --radius-xl  : 1rem;     /* 16px */
-  --radius-2xl : 1.5rem;   /* 24px */
+  --radius-sm  : 0.25rem;
+  --radius-md  : 0.5rem;
+  --radius-lg  : 0.75rem;
+  --radius-xl  : 1rem;
+  --radius-2xl : 1.5rem;
   --radius-full: 9999px;
 
 
-  /* ── Shadows ───────────────────────────────────────────────────────────── */
+  /* ── Shadows — very soft ───────────────────────────────────────────────── */
 
-  --shadow-sm : 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md : 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
-  --shadow-lg : 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
-  --shadow-xl : 0 20px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.08);
-  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.2);
+  --shadow-sm : 0 1px 3px 0 rgb(0 0 0 / 0.04);
+  --shadow-md : 0 4px 8px -2px rgb(0 0 0 / 0.06), 0 2px 4px -2px rgb(0 0 0 / 0.04);
+  --shadow-lg : 0 8px 20px -4px rgb(0 0 0 / 0.07), 0 4px 8px -4px rgb(0 0 0 / 0.04);
+  --shadow-xl : 0 20px 25px -5px rgb(0 0 0 / 0.06), 0 8px 10px -6px rgb(0 0 0 / 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.12);
 
 
   /* ── Transitions ───────────────────────────────────────────────────────── */
@@ -155,10 +150,6 @@
   --z-overlay:  100;
   --z-modal  :  200;
   --z-toast  :  300;
-
-
-  /* ── Breakpoints (reference — use in media queries, not var()) ─────────── */
-  /* sm: 640px | md: 768px | lg: 1024px | xl: 1280px | 2xl: 1536px          */
 
 
   /* ── Container max-widths ──────────────────────────────────────────────── */
