@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Master Suite — a spacious 45 m² king bedroom with private terrace and sweeping garden views." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" />
+
+    <link rel="stylesheet" href="/src/css/tokens.css" />
+    <link rel="stylesheet" href="/src/css/global.css" />
+    <link rel="stylesheet" href="/src/css/sections/room-detail.css" />
+    <link rel="stylesheet" href="/src/css/animations.css" />
+    <link rel="stylesheet" href="/src/css/lightbox.css" />
+
+    <title>Master Suite — Villa</title>
+  </head>
+  <body>
+
+    <header class="is-scrolled">
+      <nav aria-label="Main navigation">
+        <a href="/" class="nav-brand">Villa</a>
+        <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-list">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+        <ul id="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#pool-outdoor">Pool &amp; Outdoor</a></li>
+          <li><a href="/#interior-rooms">Rooms</a></li>
+          <li><a href="/#location">Location</a></li>
+          <li><a href="/#amenities">Amenities</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <nav class="room-detail__breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Villa</a></li>
+          <li><a href="/#interior-rooms">Rooms</a></li>
+          <li aria-current="page">Master Suite</li>
+        </ol>
+      </nav>
+
+      <section class="room-detail__hero" aria-label="Master Suite hero image">
+        <img
+          class="room-detail__hero-img"
+          src="/images/rooms/master-suite-hero.jpg"
+          alt="Master suite bedroom with king bed, natural linen, and garden light"
+          width="2560"
+          height="1440"
+          fetchpriority="high"
+        />
+        <div class="room-detail__hero-caption">
+          <span class="room-detail__eyebrow">Master Suite</span>
+          <h1 class="room-detail__title"><em>Sleep in Elegance</em></h1>
+        </div>
+      </section>
+
+      <div class="room-detail__specs-bar">
+        <dl class="room-detail__specs">
+          <div class="room-detail__spec">
+            <dt>Bed</dt>
+            <dd>King</dd>
+          </div>
+          <div class="room-detail__spec">
+            <dt>Guests</dt>
+            <dd>2</dd>
+          </div>
+          <div class="room-detail__spec">
+            <dt>Size</dt>
+            <dd>45 m²</dd>
+          </div>
+          <div class="room-detail__spec">
+            <dt>View</dt>
+            <dd>Garden</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="room-detail__gallery-section">
+        <div class="room-detail__gallery">
+          <figure>
+            <img src="/images/rooms/master-suite-1.jpg" alt="King bed with white linen and warm pendant lighting" width="1200" height="800" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="/images/rooms/master-suite-2.jpg" alt="Private terrace with rattan chairs overlooking the garden" width="600" height="440" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="/images/rooms/master-suite-3.jpg" alt="En-suite marble bathroom with double vanity" width="600" height="440" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="/images/rooms/master-suite-4.jpg" alt="Rain shower enclosed in frameless glass" width="600" height="440" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="/images/rooms/master-suite-5.jpg" alt="Full-length wardrobe and built-in safe" width="600" height="440" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="/images/rooms/master-suite-6.jpg" alt="Garden view at golden hour from the terrace" width="600" height="440" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+
+      <section class="room-detail__content">
+
+        <div class="room-detail__description" data-animate>
+          <span class="room-detail__section-eyebrow">About This Room</span>
+          <h2>Your Private Sanctuary</h2>
+          <p>
+            The Master Suite is the villa's most spacious bedroom — a 45 m² retreat
+            designed for complete rest. A hand-crafted king bed sits at the centre of
+            the room, dressed in crisp Italian linen and surrounded by warm teak
+            joinery and soft pendant lighting that shifts from morning brightness
+            to amber evening warmth.
+          </p>
+          <p>
+            Sliding glass doors open directly onto your private terrace, where a pair
+            of rattan chairs face the tropical garden. Completely shielded from the
+            main pool area, it offers a level of quiet that is rare in villa stays —
+            a place to linger over coffee at dawn or a nightcap long after the
+            rest of the villa has gone to sleep.
+          </p>
+          <p>
+            The en-suite bathroom is finished in honed Javanese marble with a double
+            vanity, deep soaking tub, and a frameless-glass rain shower. A full-length
+            wardrobe runs the length of one wall, thoughtfully fitted with drawers,
+            hanging space, and a hidden safe. Blackout curtains ensure that the room
+            stays as dark as you need, for as long as you need.
+          </p>
+          <p>
+            An in-room espresso machine, a selection of teas, and a stocked minibar
+            complete the picture — because the best mornings begin before you leave
+            the room.
+          </p>
+        </div>
+
+        <div class="room-detail__facilities" data-animate data-animate-delay="1">
+          <h3>Facilities</h3>
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10H2"/><path d="M6 8V4"/></svg>
+              King bed
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M4 12a2 2 0 0 1-2-2V6h20v4a2 2 0 0 1-2 2M6 12v5a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-5"/></svg>
+              En-suite bath (soaking tub + rain shower)
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              Private terrace
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Garden view
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 10 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+              Air conditioning
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg>
+              Smart TV
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+              High-speed WiFi
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+              In-room safe
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              Espresso machine &amp; minibar
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Bathrobe &amp; luxury toiletries
+            </li>
+          </ul>
+        </div>
+
+      </section>
+
+      <section class="room-detail__cta-section" aria-label="Book this room">
+        <h2>Ready to Make It Yours?</h2>
+        <p>Reach out and we'll take care of everything — from arrival to departure.</p>
+        <a href="/#contact" class="room-detail__book-btn">
+          Enquire Now <span aria-hidden="true">→</span>
+        </a>
+      </section>
+
+      <nav class="room-detail__room-nav" aria-label="Room navigation">
+        <a href="/rooms/outdoor-bathroom/" class="room-detail__prev">
+          <span class="room-nav__label">← Previous</span>
+          <span class="room-nav__name">Outdoor Bathroom</span>
+        </a>
+        <a href="/rooms/bedroom-two/" class="room-detail__next">
+          <span class="room-nav__label">Next →</span>
+          <span class="room-nav__name">Bedroom Two</span>
+        </a>
+      </nav>
+
+    </main>
+
+    <footer>
+      <div class="footer__inner">
+        <span class="footer__name">Villa</span>
+        <p class="footer__copy">&copy; 2025 Villa. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div class="room-detail__sticky-cta" aria-hidden="true">
+      <a href="/#contact" tabindex="-1">Book This Room</a>
+    </div>
+
+    <script type="module" src="/src/js/main-room.js"></script>
+  </body>
+</html>

@@ -7,6 +7,12 @@ export default [
     ignores: ['dist/**'],
   },
   {
+    files: ['vite.config.js'],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
+  {
     files: ['src/**/*.js'],
     languageOptions: {
       globals: globals.browser,
