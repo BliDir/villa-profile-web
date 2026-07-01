@@ -51,25 +51,24 @@
       <section id="hero" aria-label="Hero">
 
         <!-- SWAP: replace src with the main villa hero photo.
-             Recommended: 2560 × 1440 px landscape, WebP < 300 kB.
+             Recommended: 2560 × 1440 px portrait-leaning, WebP < 300 kB.
              Place the file at: /public/images/hero.webp -->
-        <img
-          class="hero__bg-img"
-          src="/images/hero.jpg"
-          alt=""
-          aria-hidden="true"
-          width="2560"
-          height="1440"
-          fetchpriority="high"
-        />
-
-        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__image-pane" aria-hidden="true">
+          <img
+            class="hero__bg-img"
+            src="/images/hero.jpg"
+            alt=""
+            width="2560"
+            height="1440"
+            fetchpriority="high"
+          />
+        </div>
 
         <div class="hero__content">
           <span class="hero__eyebrow">Welcome to</span>
 
           <!-- SWAP: replace "Villa" with your villa's name -->
-          <h1 class="hero__title">Villa</h1>
+          <h1 class="hero__title"><em>Villa</em></h1>
 
           <!-- SWAP: update tagline to match your villa's brand voice -->
           <p class="hero__tagline">
@@ -78,7 +77,9 @@
           </p>
 
           <!-- CTA scrolls to the next section via smooth-scroll (set on html) -->
-          <a href="#pool-outdoor" class="hero__cta">Explore the Villa</a>
+          <a href="#pool-outdoor" class="hero__cta">
+            Explore the Villa <span class="hero__cta-arrow" aria-hidden="true">→</span>
+          </a>
         </div>
 
       </section>

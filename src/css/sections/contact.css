@@ -1,8 +1,8 @@
-/* ── Contact section ───────────────────────────────────────────────────────── */
+/* ── Contact section ────────────────────────────────────────────────────────── */
 
 #contact {
-  background-color: var(--color-bg-subtle);
-  padding-block: var(--space-24);
+  background-color: var(--color-bg);
+  padding-block: var(--space-32);
 }
 
 .contact__inner {
@@ -19,7 +19,7 @@
 .contact__header {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-5);
 }
 
 .contact__eyebrow {
@@ -31,8 +31,10 @@
 }
 
 .contact__header h2 {
-  font-size: var(--text-4xl);
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+  font-style: italic;
   color: var(--color-text);
+  line-height: var(--leading-tight);
 }
 
 .contact__header p {
@@ -49,19 +51,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
 .contact__link {
   display: inline-flex;
   align-items: center;
   gap: var(--space-3);
-  padding: var(--space-4) var(--space-6);
-  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
   border: 1px solid var(--color-border-strong);
-  background-color: var(--color-surface);
+  background-color: transparent;
   color: var(--color-text);
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-weight: var(--font-medium);
   text-decoration: none;
   transition:
@@ -71,7 +73,7 @@
 
 .contact__link:hover,
 .contact__link:focus-visible {
-  border-color: var(--color-primary-400);
+  border-color: var(--color-neutral-400);
   background-color: var(--color-primary-50);
   color: var(--color-text);
   text-decoration: none;
@@ -95,10 +97,10 @@
   color: #FFFFFF;
 }
 
-/* ── Footer — light, multi-column ─────────────────────────────────────────── */
+/* ── Footer ─────────────────────────────────────────────────────────────────── */
 
 footer {
-  background-color: var(--color-bg-subtle);
+  background-color: var(--color-bg);
   border-top: 1px solid var(--color-border);
   padding-block: var(--space-16) var(--space-10);
 }
@@ -118,9 +120,9 @@ footer {
   font-family: var(--font-display);
   font-size: var(--text-xl);
   font-weight: var(--font-bold);
-  letter-spacing: var(--tracking-wide);
+  font-style: italic;
+  letter-spacing: var(--tracking-normal);
   color: var(--color-text);
-  text-transform: uppercase;
   margin-bottom: var(--space-3);
 }
 
@@ -150,7 +152,7 @@ footer {
 }
 
 .footer__social-link:hover {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-text);
   color: var(--color-text);
   text-decoration: none;
 }

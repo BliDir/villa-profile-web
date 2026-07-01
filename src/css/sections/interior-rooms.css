@@ -1,18 +1,23 @@
+/* ── Interior Rooms ─────────────────────────────────────────────────────────── */
+
 #interior-rooms {
   background-color: var(--color-bg);
-  padding-block: var(--space-24);
+  padding-block: var(--space-32);
+  overflow: hidden;
 }
 
 .rooms__inner {
-  max-width: var(--container-xl);
-  margin-inline: auto;
-  padding-inline: var(--space-6);
   display: flex;
   flex-direction: column;
   gap: var(--space-12);
 }
 
+/* ── Section header — full-width, inline padded ────────────────────────────── */
+
 .rooms__header {
+  max-width: var(--container-xl);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
@@ -23,47 +28,63 @@
   font-weight: var(--font-semibold);
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
-  color: var(--color-accent-500);
+  color: var(--color-text-muted);
 }
 
 .rooms__header h2 {
-  font-size: var(--text-4xl);
+  font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl));
+  font-style: italic;
   color: var(--color-text);
 }
 
 .rooms__header p {
-  font-size: var(--text-md);
+  font-size: var(--text-base);
   line-height: var(--leading-relaxed);
   color: var(--color-text-muted);
-  max-width: 56ch;
+  max-width: 52ch;
 }
 
-/* ── Room card grid ────────────────────────────────────────────────────────── */
+/* ── Horizontal scroll ribbon ───────────────────────────────────────────────── */
 
 .rooms__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-6);
+  display: flex;
+  gap: var(--space-5);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
+  padding-inline: var(--space-6);
+  padding-bottom: var(--space-4);
+  /* fade edges to hint there's more to scroll */
+  mask-image: linear-gradient(to right, transparent 0, black 48px, black calc(100% - 48px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 48px, black calc(100% - 48px), transparent 100%);
 }
+
+.rooms__grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Room card ──────────────────────────────────────────────────────────────── */
 
 .room-card {
   display: flex;
   flex-direction: column;
-  border-radius: var(--radius-lg);
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  border-radius: var(--radius-xl);
   overflow: hidden;
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
   transition:
-    box-shadow       var(--transition-base),
-    border-color     var(--transition-base),
-    background-color var(--transition-base);
+    box-shadow   var(--transition-base),
+    border-color var(--transition-base),
+    transform    var(--transition-base);
 }
 
 .room-card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--color-primary-300);
-  background-color: var(--color-primary-50);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-neutral-300);
+  transform: translateY(-4px);
 }
 
 .room-card__image {
@@ -85,17 +106,18 @@
 }
 
 .room-card__body {
-  padding: var(--space-5) var(--space-6);
+  padding: var(--space-5) var(--space-6) var(--space-6);
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-2);
   flex: 1;
 }
 
 .room-card__name {
   font-family: var(--font-display);
   font-size: var(--text-lg);
-  font-weight: var(--font-semibold);
+  font-weight: var(--font-bold);
+  font-style: italic;
   color: var(--color-text);
 }
 
@@ -105,14 +127,14 @@
   color: var(--color-text-muted);
 }
 
-/* ── Spec row — bed · guests · size · view ──────────────────────────────────── */
+/* ── Spec row ───────────────────────────────────────────────────────────────── */
 
 .room-card__specs {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2) var(--space-4);
   list-style: none;
-  padding-top: var(--space-3);
+  padding-top: var(--space-4);
   border-top: 1px solid var(--color-border);
   margin-top: auto;
 }
@@ -128,21 +150,23 @@
 
 .room-card__spec svg {
   flex-shrink: 0;
-  color: var(--color-accent-500);
+  color: var(--color-neutral-400);
   width: 13px;
   height: 13px;
 }
 
-/* ── Responsive ────────────────────────────────────────────────────────────── */
-
-@media (max-width: 1024px) {
-  .rooms__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
 
 @media (max-width: 640px) {
   .rooms__grid {
-    grid-template-columns: 1fr;
+    /* remove edge fade on mobile, full-bleed scroll */
+    mask-image: none;
+    -webkit-mask-image: none;
+    padding-inline: var(--space-4);
+    gap: var(--space-4);
+  }
+
+  .room-card {
+    flex: 0 0 280px;
   }
 }
