@@ -162,26 +162,130 @@ header nav ul a:focus-visible {
   text-decoration: none;
 }
 
-header nav ul li:last-child a {
-  color: var(--color-text);
-  padding: var(--space-2) var(--space-5);
-  border: 1.5px solid var(--color-border-strong);
-  border-radius: var(--radius-full);
-  transition:
-    background-color var(--transition-fast),
-    border-color     var(--transition-fast),
-    color            var(--transition-fast);
+/* Contact pill CTA — desktop only */
+@media (min-width: 769px) {
+  header nav ul li:last-child a {
+    color: var(--color-text);
+    padding: var(--space-2) var(--space-5);
+    border: 1.5px solid var(--color-border-strong);
+    border-radius: var(--radius-full);
+    transition:
+      background-color var(--transition-fast),
+      border-color     var(--transition-fast),
+      color            var(--transition-fast);
+  }
+
+  header nav ul li:last-child a:hover,
+  header nav ul li:last-child a:focus-visible {
+    background-color: var(--color-text);
+    border-color: var(--color-text);
+    color: var(--color-neutral-0);
+    text-decoration: none;
+  }
 }
 
-header nav ul li:last-child a:hover,
-header nav ul li:last-child a:focus-visible {
+
+/* ── 5. Mobile nav — hamburger (DAI-93) ────────────────────────────────────── */
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: var(--space-2);
+  min-width: 44px;
+  min-height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.nav-toggle__bar {
+  display: block;
+  width: 24px;
+  height: 2px;
   background-color: var(--color-text);
-  border-color: var(--color-text);
-  color: var(--color-neutral-0);
-  text-decoration: none;
+  border-radius: 2px;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
 }
 
-/* ── 4b. Anchor scroll offset + section separator ───────────────────────────── */
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  header {
+    position: -webkit-sticky; /* DAI-97: Safari cross-browser fix */
+    position: sticky;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  header nav {
+    position: relative;
+    flex-wrap: wrap;
+    gap: 0;
+    padding-block: var(--space-3);
+  }
+
+  .nav-brand {
+    flex: 1;
+  }
+
+  header nav ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    flex-wrap: nowrap;
+    padding-block: var(--space-2) var(--space-4);
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-3);
+  }
+
+  header nav ul.is-open {
+    display: flex;
+  }
+
+  header nav ul a {
+    display: flex;
+    align-items: center;
+    padding: var(--space-3) 0;
+    font-size: var(--text-base);
+    min-height: 44px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  header nav ul li:last-child a {
+    border-bottom: none;
+  }
+}
+
+
+/* ── 6. Touch targets — ensure all interactive elements ≥ 44px (DAI-93) ────── */
+
+a, button {
+  min-height: 44px;
+}
+
+@media (min-width: 769px) {
+  header nav ul a {
+    min-height: unset;
+  }
+}
+
+
+/* ── 7. Anchor scroll offset + section separator ────────────────────────────── */
 
 section {
   scroll-margin-top: 80px;
