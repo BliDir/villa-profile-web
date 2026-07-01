@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kitchen — fully equipped with a gas range, espresso machine, and breakfast island." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" />
+
+    <link rel="stylesheet" href="/src/css/tokens.css" />
+    <link rel="stylesheet" href="/src/css/global.css" />
+    <link rel="stylesheet" href="/src/css/sections/room-detail.css" />
+    <link rel="stylesheet" href="/src/css/animations.css" />
+    <link rel="stylesheet" href="/src/css/lightbox.css" />
+
+    <title>Kitchen — Villa</title>
+  </head>
+  <body>
+
+    <header class="is-scrolled">
+      <nav aria-label="Main navigation">
+        <a href="/" class="nav-brand">Villa</a>
+        <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-list">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+        <ul id="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#pool-outdoor">Pool &amp; Outdoor</a></li>
+          <li><a href="/#interior-rooms">Rooms</a></li>
+          <li><a href="/#location">Location</a></li>
+          <li><a href="/#amenities">Amenities</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <nav class="room-detail__breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Villa</a></li>
+          <li><a href="/#interior-rooms">Rooms</a></li>
+          <li aria-current="page">Kitchen</li>
+        </ol>
+      </nav>
+
+      <section class="room-detail__hero" aria-label="Kitchen hero image">
+        <img
+          class="room-detail__hero-img"
+          src="/images/rooms/kitchen-hero.jpg"
+          alt="Villa kitchen with gas range, stone island, and garden window"
+          width="2560"
+          height="1440"
+          fetchpriority="high"
+        />
+        <div class="room-detail__hero-caption">
+          <span class="room-detail__eyebrow">Kitchen</span>
+          <h1 class="room-detail__title"><em>Cook, Gather, Linger</em></h1>
+        </div>
+      </section>
+
+      <div class="room-detail__specs-bar">
+        <dl class="room-detail__specs">
+          <div class="room-detail__spec">
+            <dt>Hob</dt>
+            <dd>Gas range</dd>
+          </div>
+          <div class="room-detail__spec">
+            <dt>Capacity</dt>
+            <dd>12 guests</dd>
+          </div>
+          <div class="room-detail__spec">
+            <dt>Size</dt>
+            <dd>40 m²</dd>
+          </div>
+          <div class="room-detail__spec">
+            <dt>View</dt>
+            <dd>Garden</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="room-detail__gallery-section">
+        <div class="room-detail__gallery">
+          <figure>
+            <img src="/images/rooms/kitchen-1.jpg" alt="Kitchen island with bar stools and morning light" width="1200" height="800" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="/images/rooms/kitchen-2.jpg" alt="Six-burner gas range with stainless hood" width="600" height="440" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="/images/rooms/kitchen-3.jpg" alt="Espresso machine and morning coffee setup" width="600" height="440" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="/images/rooms/kitchen-4.jpg" alt="Fully stocked pantry and open shelving" width="600" height="440" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="/images/rooms/kitchen-5.jpg" alt="Garden window view above the prep sink" width="600" height="440" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="/images/rooms/kitchen-6.jpg" alt="Evening kitchen atmosphere with warm lighting" width="600" height="440" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+
+      <section class="room-detail__content">
+
+        <div class="room-detail__description" data-animate>
+          <span class="room-detail__section-eyebrow">About This Space</span>
+          <h2>A Proper Kitchen</h2>
+          <p>
+            Not all villa kitchens are created equal. This one was designed for guests
+            who actually cook. A six-burner gas range sits beneath a stainless
+            steel hood, flanked by generous prep surfaces in pale stone. Pots,
+            pans, and knives are the proper kind — not the too-light, too-light
+            versions that disappoint you the moment you pick them up.
+          </p>
+          <p>
+            The central island doubles as a breakfast bar, with three bar stools that
+            fill up fast during morning coffee. An espresso machine, filtered water
+            tap, and a dedicated juice bar make slow mornings effortless. The
+            large-capacity fridge is stocked with essentials on arrival and has
+            room for everything you might bring back from the local market.
+          </p>
+          <p>
+            A garden-facing window runs the length of the prep sink — the best
+            view in the villa, some guests say — and everything from the dishwasher
+            to the rice cooker is thoughtfully placed within reach. Whether you're
+            cooking for two or feeding the whole villa, this kitchen handles it.
+          </p>
+        </div>
+
+        <div class="room-detail__facilities" data-animate data-animate-delay="1">
+          <h3>Facilities</h3>
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+              6-burner gas range
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              Espresso machine
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M5 9h14"/></svg>
+              Fridge / freezer
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Dishwasher
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Microwave &amp; oven
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Rice cooker &amp; blender
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Full cookware &amp; utensils
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Breakfast bar (3 stools)
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+              High-speed WiFi
+            </li>
+          </ul>
+        </div>
+
+      </section>
+
+      <section class="room-detail__cta-section" aria-label="Book the villa">
+        <h2>Ready to Make It Yours?</h2>
+        <p>Reach out and we'll take care of everything — from arrival to departure.</p>
+        <a href="/#contact" class="room-detail__book-btn">
+          Enquire Now <span aria-hidden="true">→</span>
+        </a>
+      </section>
+
+      <nav class="room-detail__room-nav" aria-label="Room navigation">
+        <a href="/rooms/living-dining/" class="room-detail__prev">
+          <span class="room-nav__label">← Previous</span>
+          <span class="room-nav__name">Living &amp; Dining</span>
+        </a>
+        <a href="/rooms/outdoor-bathroom/" class="room-detail__next">
+          <span class="room-nav__label">Next →</span>
+          <span class="room-nav__name">Outdoor Bathroom</span>
+        </a>
+      </nav>
+
+    </main>
+
+    <footer>
+      <div class="footer__inner">
+        <span class="footer__name">Villa</span>
+        <p class="footer__copy">&copy; 2025 Villa. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div class="room-detail__sticky-cta" aria-hidden="true">
+      <a href="/#contact" tabindex="-1">Book This Room</a>
+    </div>
+
+    <script type="module" src="/src/js/main-room.js"></script>
+  </body>
+</html>
