@@ -36,7 +36,17 @@
     <header>
       <nav aria-label="Main navigation">
         <a href="#hero" class="nav-brand">Villa</a>
-        <ul>
+        <button
+          class="nav-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="nav-list"
+        >
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+        <ul id="nav-list">
           <li><a href="#hero">Home</a></li>
           <li><a href="#pool-outdoor">Pool & Outdoor</a></li>
           <li><a href="#interior-rooms">Rooms</a></li>
