@@ -1,18 +1,25 @@
+/* ── Amenities ──────────────────────────────────────────────────────────────── */
+
 #amenities {
   background-color: var(--color-bg);
-  padding-block: var(--space-24);
+  padding-block: var(--space-32);
 }
+
+/* ── 2-column: sticky header left, pill grid right ─────────────────────────── */
 
 .amenities__inner {
   max-width: var(--container-xl);
   margin-inline: auto;
   padding-inline: var(--space-6);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-12);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-16);
+  align-items: start;
 }
 
 .amenities__header {
+  position: sticky;
+  top: 100px;
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
@@ -23,64 +30,79 @@
   font-weight: var(--font-semibold);
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
-  color: var(--color-primary-500);
+  color: var(--color-text-muted);
 }
 
 .amenities__header h2 {
-  font-size: var(--text-4xl);
+  font-size: clamp(var(--text-2xl), 3vw, var(--text-4xl));
+  font-style: italic;
   color: var(--color-text);
 }
 
 .amenities__header p {
-  font-size: var(--text-md);
+  font-size: var(--text-base);
   line-height: var(--leading-relaxed);
   color: var(--color-text-muted);
-  max-width: 56ch;
 }
 
-/* ── Icon grid — auto-fill, no media queries needed ────────────────────────── */
+/* ── Pill tag grid ──────────────────────────────────────────────────────────── */
 
 .amenities__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  list-style: none;
+  padding-top: var(--space-2);
 }
 
-/* Adding/removing an amenity = add/remove one .amenity-item in HTML */
-
 .amenity-item {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
   align-items: center;
-  gap: var(--space-3);
-  padding: var(--space-6) var(--space-4);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
-  background-color: var(--color-surface);
-  text-align: center;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border-strong);
+  background-color: transparent;
+  transition:
+    border-color     var(--transition-fast),
+    background-color var(--transition-fast),
+    color            var(--transition-fast);
 }
 
 .amenity-item:hover {
-  border-color: var(--color-primary-300);
-  box-shadow: var(--shadow-md);
+  border-color: var(--color-neutral-400);
+  background-color: var(--color-primary-50);
 }
 
 .amenity-item__icon {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-md);
-  background-color: var(--color-primary-50);
-  color: var(--color-primary-600);
+  color: var(--color-text-muted);
   flex-shrink: 0;
+}
+
+.amenity-item__icon svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 1.75;
 }
 
 .amenity-item__label {
   font-size: var(--text-sm);
   font-weight: var(--font-medium);
   color: var(--color-text);
-  line-height: var(--leading-snug);
+  white-space: nowrap;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .amenities__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .amenities__header {
+    position: static;
+  }
 }

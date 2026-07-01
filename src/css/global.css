@@ -61,12 +61,12 @@ a {
 }
 
 a:hover {
-  color: var(--color-primary-500);
+  color: var(--color-accent-500);
   text-decoration: underline;
 }
 
 a:focus-visible {
-  outline: 2px solid var(--color-primary-500);
+  outline: 2px solid var(--color-accent-500);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
   text-decoration: none;
@@ -84,22 +84,32 @@ button {
 }
 
 button:focus-visible {
-  outline: 2px solid var(--color-primary-500);
+  outline: 2px solid var(--color-accent-500);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
 
 
-/* ── 4. Sticky navigation ──────────────────────────────────────────────────── */
+/* ── 4. Navigation — fixed, frosted glass when scrolled ────────────────────── */
 
 header {
-  position: -webkit-sticky; /* DAI-97: Safari cross-browser fix */
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: var(--z-overlay);
-  background-color: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color var(--transition-base),
+    border-color     var(--transition-base);
+}
+
+header.is-scrolled {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-bottom-color: var(--color-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 header nav {
@@ -108,38 +118,39 @@ header nav {
   justify-content: space-between;
   max-width: var(--container-xl);
   margin-inline: auto;
-  padding: var(--space-4) var(--space-6);
+  padding: var(--space-5) var(--space-6);
   gap: var(--space-8);
 }
 
 .nav-brand {
   font-family: var(--font-display);
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   font-weight: var(--font-bold);
-  letter-spacing: var(--tracking-wide);
-  color: var(--color-primary-700);
-  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: var(--tracking-normal);
+  color: var(--color-text);
+  text-transform: none;
   white-space: nowrap;
+  transition: color var(--transition-fast);
 }
 
 .nav-brand:hover,
 .nav-brand:focus-visible {
-  color: var(--color-primary-500);
+  color: var(--color-text-muted);
   text-decoration: none;
 }
 
 header nav ul {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--space-6);
   list-style: none;
-  flex-wrap: wrap;
 }
 
 header nav ul a {
-  font-size: var(--text-sm);
-  font-weight: var(--font-medium);
-  letter-spacing: var(--tracking-wider);
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
   color: var(--color-text-muted);
   transition: color var(--transition-fast);
@@ -147,8 +158,30 @@ header nav ul a {
 
 header nav ul a:hover,
 header nav ul a:focus-visible {
-  color: var(--color-primary-500);
+  color: var(--color-text);
   text-decoration: none;
+}
+
+/* Contact pill CTA — desktop only */
+@media (min-width: 769px) {
+  header nav ul li:last-child a {
+    color: var(--color-text);
+    padding: var(--space-2) var(--space-5);
+    border: 1.5px solid var(--color-border-strong);
+    border-radius: var(--radius-full);
+    transition:
+      background-color var(--transition-fast),
+      border-color     var(--transition-fast),
+      color            var(--transition-fast);
+  }
+
+  header nav ul li:last-child a:hover,
+  header nav ul li:last-child a:focus-visible {
+    background-color: var(--color-text);
+    border-color: var(--color-text);
+    color: var(--color-neutral-0);
+    text-decoration: none;
+  }
 }
 
 
@@ -189,7 +222,7 @@ header nav ul a:focus-visible {
 
 @media (max-width: 768px) {
   header {
-    position: -webkit-sticky;
+    position: -webkit-sticky; /* DAI-97: Safari cross-browser fix */
     position: sticky;
   }
 
@@ -225,12 +258,11 @@ header nav ul a:focus-visible {
   }
 
   header nav ul a {
-    display: block;
-    padding: var(--space-3) 0;
-    font-size: var(--text-base);
-    min-height: 44px; /* touch target DAI-93 */
     display: flex;
     align-items: center;
+    padding: var(--space-3) 0;
+    font-size: var(--text-base);
+    min-height: 44px;
     border-bottom: 1px solid var(--color-border);
   }
 
@@ -246,9 +278,19 @@ a, button {
   min-height: 44px;
 }
 
-/* Restore nav links that don't need full block height on desktop */
 @media (min-width: 769px) {
   header nav ul a {
     min-height: unset;
   }
+}
+
+
+/* ── 7. Anchor scroll offset + section separator ────────────────────────────── */
+
+section {
+  scroll-margin-top: 80px;
+}
+
+section + section {
+  border-top: 1px solid var(--color-border);
 }

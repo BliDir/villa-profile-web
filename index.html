@@ -15,6 +15,11 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
+    <!-- Google Fonts — Playfair Display (headings) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" />
+
     <!-- Styles -->
     <link rel="stylesheet" href="/src/css/tokens.css" />
     <link rel="stylesheet" href="/src/css/global.css" />
@@ -53,25 +58,24 @@
       <section id="hero" aria-label="Hero">
 
         <!-- SWAP: replace src with the main villa hero photo.
-             Recommended: 2560 × 1440 px landscape, JPEG < 500 kB.
-             Place the file at: /public/images/hero.jpg -->
-        <img
-          class="hero__bg-img"
-          src="/images/hero.jpg"
-          alt=""
-          aria-hidden="true"
-          width="2560"
-          height="1440"
-          fetchpriority="high"
-        />
-
-        <div class="hero__overlay" aria-hidden="true"></div>
+             Recommended: 2560 × 1440 px portrait-leaning, WebP < 300 kB.
+             Place the file at: /public/images/hero.webp -->
+        <div class="hero__image-pane" aria-hidden="true">
+          <img
+            class="hero__bg-img"
+            src="/images/hero.jpg"
+            alt=""
+            width="2560"
+            height="1440"
+            fetchpriority="high"
+          />
+        </div>
 
         <div class="hero__content">
           <span class="hero__eyebrow">Welcome to</span>
 
           <!-- SWAP: replace "Villa" with your villa's name -->
-          <h1 class="hero__title">Villa</h1>
+          <h1 class="hero__title"><em>Villa</em></h1>
 
           <!-- SWAP: update tagline to match your villa's brand voice -->
           <p class="hero__tagline">
@@ -80,7 +84,9 @@
           </p>
 
           <!-- CTA scrolls to the next section via smooth-scroll (set on html) -->
-          <a href="#pool-outdoor" class="hero__cta">Explore the Villa</a>
+          <a href="#pool-outdoor" class="hero__cta">
+            Explore the Villa <span class="hero__cta-arrow" aria-hidden="true">→</span>
+          </a>
         </div>
 
       </section>
@@ -90,8 +96,8 @@
 
           <!-- ── Main feature: large image left, copy right ─────────────────
                SWAP: replace the src below with the primary pool photo.
-               Recommended size: 1800 × 1200 px (3:2 ratio).
-               Example: /images/pool-main.jpg
+               Recommended size: 1800 × 1200 px (3:2 ratio), WebP.
+               Example: /images/pool-main.webp
           ─────────────────────────────────────────────────────────────────── -->
           <div class="pool-outdoor__feature">
             <figure class="pool-outdoor__main-image">
@@ -124,7 +130,7 @@
 
           <!-- ── Supporting gallery ─────────────────────────────────────────
                SWAP: replace each src with a supporting outdoor photo.
-               Recommended size: 1200 × 800 px (3:2 ratio).
+               Recommended size: 1200 × 800 px (3:2 ratio), WebP.
           ─────────────────────────────────────────────────────────────────── -->
           <div class="pool-outdoor__gallery">
             <figure>
@@ -170,9 +176,8 @@
 
           <!-- ── Room card grid ──────────────────────────────────────────────
                To add a room: copy one .room-card block and update the image
-               src, alt, name, and description.
-               To remove a room: delete the .room-card block.
-               Recommended image size: 900 × 600 px (3:2 ratio).
+               src, alt, name, description, and specs.
+               Recommended image size: 900 × 600 px (3:2 ratio), WebP.
           ──────────────────────────────────────────────────────────────────── -->
           <div class="rooms__grid">
 
@@ -184,6 +189,24 @@
               <div class="room-card__body">
                 <h3 class="room-card__name">Master Suite</h3>
                 <p class="room-card__desc">A spacious king bedroom with en-suite bath, private terrace, and sweeping garden views.</p>
+                <ul class="room-card__specs">
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10H2"/><path d="M6 8V4"/></svg>
+                    King Bed
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                    2 guests
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+                    45 m²
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    Garden view
+                  </li>
+                </ul>
               </div>
             </article>
 
@@ -195,6 +218,24 @@
               <div class="room-card__body">
                 <h3 class="room-card__name">Bedroom Two</h3>
                 <p class="room-card__desc">Twin beds that convert to a king, with a dedicated work nook and garden-facing window.</p>
+                <ul class="room-card__specs">
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10H2"/><path d="M6 8V4"/></svg>
+                    Twin / King
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                    2 guests
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+                    30 m²
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    Garden view
+                  </li>
+                </ul>
               </div>
             </article>
 
@@ -206,6 +247,24 @@
               <div class="room-card__body">
                 <h3 class="room-card__name">Bedroom Three</h3>
                 <p class="room-card__desc">A cosy queen room bathed in morning light, with built-in wardrobe and pool view.</p>
+                <ul class="room-card__specs">
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10H2"/><path d="M6 8V4"/></svg>
+                    Queen Bed
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                    2 guests
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+                    28 m²
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    Pool view
+                  </li>
+                </ul>
               </div>
             </article>
 
@@ -217,6 +276,24 @@
               <div class="room-card__body">
                 <h3 class="room-card__name">Living &amp; Dining</h3>
                 <p class="room-card__desc">An open-plan lounge and dining area that flows onto the pool terrace through folding glass doors.</p>
+                <ul class="room-card__specs">
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    Open-plan
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                    12 guests
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+                    80 m²
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    Pool-facing
+                  </li>
+                </ul>
               </div>
             </article>
 
@@ -228,6 +305,24 @@
               <div class="room-card__body">
                 <h3 class="room-card__name">Kitchen</h3>
                 <p class="room-card__desc">Fully equipped with a gas range, espresso machine, and everything you need for long, lazy breakfasts.</p>
+                <ul class="room-card__specs">
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                    Gas range
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                    Espresso machine
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+                    40 m²
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    Garden view
+                  </li>
+                </ul>
               </div>
             </article>
 
@@ -239,6 +334,24 @@
               <div class="room-card__body">
                 <h3 class="room-card__name">Outdoor Bathroom</h3>
                 <p class="room-card__desc">A semi-open bathroom with a deep soaking tub, rain shower, and tropical garden privacy wall.</p>
+                <ul class="room-card__specs">
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M4 12a2 2 0 0 1-2-2V6h20v4a2 2 0 0 1-2 2M6 12v5a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-5"/></svg>
+                    Soaking tub
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v6m0 0c-2 0-4 1-4 3H6a2 2 0 0 0-2 2v7h16v-7a2 2 0 0 0-2-2h-2c0-2-2-3-4-3z"/><line x1="6" y1="22" x2="6" y2="19"/><line x1="18" y1="22" x2="18" y2="19"/></svg>
+                    Rain shower
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"/><path d="M12 8v4l3 3"/></svg>
+                    Open-air
+                  </li>
+                  <li class="room-card__spec">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V12m0 0C12 6 7 3 7 3s-1 6 5 9zm0 0c0-6 5-9 5-9s1 6-5 9z"/></svg>
+                    Tropical garden
+                  </li>
+                </ul>
               </div>
             </article>
 
@@ -467,8 +580,7 @@
 
             <!-- SWAP: replace the phone number (digits only, no + or spaces)
                  and update the pre-filled message text as needed.
-                 Format: https://wa.me/[country-code][number]?text=[url-encoded-message]
-                 Example: https://wa.me/6281234567890?text=Hi%2C+I%27d+like+to+book+the+villa. -->
+                 Format: https://wa.me/[country-code][number]?text=[url-encoded-message] -->
             <a
               href="https://wa.me/6281234567890?text=Hi%2C+I%27m+interested+in+booking+the+villa.+Could+you+share+availability+and+rates%3F"
               class="contact__link contact__link--whatsapp"
@@ -493,8 +605,7 @@
               hello@villaname.com
             </a>
 
-            <!-- SWAP: replace href and label with the villa's Instagram handle
-                 Format: https://instagram.com/[handle] -->
+            <!-- SWAP: replace href and label with the villa's Instagram handle -->
             <a
               href="https://instagram.com/villaname"
               class="contact__link contact__link--instagram"
@@ -514,12 +625,56 @@
       </section>
     </main>
 
+    <!-- ── Footer — multi-column ──────────────────────────────────────────────── -->
     <footer>
       <div class="footer__inner">
-        <!-- SWAP: replace "Villa" with your villa's name -->
-        <p class="footer__name">Villa</p>
-        <!-- SWAP: update or remove this tagline -->
-        <p class="footer__tagline">A private sanctuary where luxury meets nature.</p>
+
+        <!-- SWAP: replace "Villa" with your villa's name and update the tagline -->
+        <div class="footer__col footer__col--brand">
+          <p class="footer__name">Villa</p>
+          <p class="footer__tagline">A private sanctuary where luxury meets nature.</p>
+          <div class="footer__social">
+            <!-- SWAP: replace href with your Instagram handle -->
+            <a href="https://instagram.com/villaname" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <!-- SWAP: replace href with your WhatsApp number -->
+            <a href="https://wa.me/6281234567890" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Explore</h4>
+          <ul class="footer__links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#pool-outdoor">Pool &amp; Outdoor</a></li>
+            <li><a href="#interior-rooms">Rooms</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Contact</h4>
+          <!-- SWAP: update location, email, and WhatsApp number -->
+          <address class="footer__address">
+            <p>Canggu, Bali, Indonesia</p>
+            <a href="mailto:hello@villaname.com">hello@villaname.com</a>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">+62 812 3456 7890</a>
+          </address>
+        </div>
+
+      </div>
+      <div class="footer__bottom">
+        <!-- SWAP: update villa name in copyright -->
         <p class="footer__copy">&copy; 2026 Villa. All rights reserved.</p>
       </div>
     </footer>
