@@ -53,14 +53,17 @@
       </nav>
 
       <section class="room-detail__hero" aria-label="Bedroom Two hero image">
-        <img
-          class="room-detail__hero-img"
-          src="/images/rooms/bedroom-two-hero.jpg"
-          alt="Bedroom Two with twin beds, garden-facing window, and morning light"
-          width="2560"
-          height="1440"
-          fetchpriority="high"
-        />
+        <picture>
+          <source srcset="/images/main-suite-top-down.webp" type="image/webp" />
+          <img
+            class="room-detail__hero-img"
+            src="/images/main-suite-top-down.png"
+            alt="Bedroom Two with twin beds, garden-facing window, and morning light"
+            width="2560"
+            height="1440"
+            fetchpriority="high"
+          />
+        </picture>
         <div class="room-detail__hero-caption">
           <span class="room-detail__eyebrow" data-i18n="rooms.bedroom_two.eyebrow">Bedroom Two</span>
           <h1 class="room-detail__title"><em data-i18n="rooms.bedroom_two.title">A Room to Breathe</em></h1>
@@ -91,22 +94,40 @@
       <div class="room-detail__gallery-section">
         <div class="room-detail__gallery">
           <figure>
-            <img src="/images/rooms/bedroom-two-1.jpg" alt="Twin beds dressed in white linen with garden light" width="1200" height="800" loading="lazy" />
+            <picture>
+              <source srcset="/images/main-suite-tab.webp" type="image/webp" />
+              <img src="/images/main-suite-tab.png" alt="Twin beds dressed in white linen with garden light" width="1200" height="800" loading="lazy" />
+            </picture>
           </figure>
           <figure>
-            <img src="/images/rooms/bedroom-two-2.jpg" alt="Garden-facing window with morning light filtering in" width="600" height="440" loading="lazy" />
+            <picture>
+              <source srcset="/images/main-suite-terrace-2.webp" type="image/webp" />
+              <img src="/images/main-suite-terrace-2.png" alt="Garden-facing window with morning light filtering in" width="600" height="440" loading="lazy" />
+            </picture>
           </figure>
           <figure>
-            <img src="/images/rooms/bedroom-two-3.jpg" alt="Dedicated work desk beneath the window" width="600" height="440" loading="lazy" />
+            <picture>
+              <source srcset="/images/main-suite-shower.webp" type="image/webp" />
+              <img src="/images/main-suite-shower.png" alt="Dedicated work desk beneath the window" width="600" height="440" loading="lazy" />
+            </picture>
           </figure>
           <figure>
-            <img src="/images/rooms/bedroom-two-4.jpg" alt="En-suite shower room with natural stone finish" width="600" height="440" loading="lazy" />
+            <picture>
+              <source srcset="/images/main-suite-dresser.webp" type="image/webp" />
+              <img src="/images/main-suite-dresser.png" alt="En-suite shower room with natural stone finish" width="600" height="440" loading="lazy" />
+            </picture>
           </figure>
           <figure>
-            <img src="/images/rooms/bedroom-two-5.jpg" alt="Built-in wardrobe and storage space" width="600" height="440" loading="lazy" />
+            <picture>
+              <source srcset="/images/main-suit.webp" type="image/webp" />
+              <img src="/images/main-suit.png" alt="Built-in wardrobe and storage space" width="600" height="440" loading="lazy" />
+            </picture>
           </figure>
           <figure>
-            <img src="/images/rooms/bedroom-two-6.jpg" alt="Detail: bedside lamp and bedding texture" width="600" height="440" loading="lazy" />
+            <picture>
+              <source srcset="/images/main-suit-detail.webp" type="image/webp" />
+              <img src="/images/main-suit-detail.png" alt="Detail: bedside lamp and bedding texture" width="600" height="440" loading="lazy" />
+            </picture>
           </figure>
         </div>
       </div>
