@@ -177,15 +177,18 @@
 
 .inquire__country-code {
   flex-shrink: 0;
-  min-width: 96px !important;
+  width: auto !important;
+  max-width: 110px !important;
   border-radius: var(--radius-lg) 0 0 var(--radius-lg) !important;
   border-right: none !important;
   background-color: var(--color-bg-subtle) !important;
-  padding-right: var(--space-8) !important;
-  font-size: var(--text-xs) !important;
+  padding-inline: var(--space-3) var(--space-4) !important;
+  font-size: var(--text-sm) !important;
 }
 
 .inquire__phone-wrap input[type="tel"] {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
   border-radius: 0 var(--radius-lg) var(--radius-lg) 0 !important;
 }
 

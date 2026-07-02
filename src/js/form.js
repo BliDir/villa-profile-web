@@ -24,6 +24,32 @@ export function initForm() {
     }
   });
 
+  // ── Char counter (defined early so lang-switch handler can call it) ──────────
+  const updateCounter = () => {
+    if (!textarea || !counter) return;
+    counter.textContent = `${500 - textarea.value.length} ${t('form.chars_remaining')}`;
+  };
+
+  // ── Predefined message template ──────────────────────────────────────────────
+  let messageIsDefault = true;
+  if (textarea && !textarea.value) {
+    textarea.value = t('form.message_default');
+  }
+  textarea?.addEventListener('input', () => { messageIsDefault = false; });
+
+  // Swap template text when language changes, as long as user hasn't edited it
+  document.querySelectorAll('.lang-switcher__option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (messageIsDefault) {
+        // setTimeout 0 lets i18n.js update the locale in storage first
+        setTimeout(() => {
+          textarea.value = t('form.message_default');
+          updateCounter();
+        }, 0);
+      }
+    });
+  });
+
   // ── Blur / input validation ───────────────────────────────────────────────────
   form.querySelectorAll('input[required], select[required]').forEach(el => {
     el.addEventListener('blur',  () => { validateField(el); updateSubmitState(form, submitBtn); });
@@ -33,12 +59,8 @@ export function initForm() {
 
   // ── Char counter ──────────────────────────────────────────────────────────────
   if (textarea && counter) {
-    const update = () => {
-      const remaining = 500 - textarea.value.length;
-      counter.textContent = `${remaining} ${t('form.chars_remaining')}`;
-    };
-    update();
-    textarea.addEventListener('input', update);
+    updateCounter();
+    textarea.addEventListener('input', updateCounter);
   }
 
   // ── Submit ────────────────────────────────────────────────────────────────────

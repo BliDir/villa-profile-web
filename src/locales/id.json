@@ -162,6 +162,7 @@
     "room_any": "Kamar Mana Saja yang Tersedia",
     "message": "Permintaan Khusus",
     "message_placeholder": "Ada yang perlu kami ketahui? Pantangan makanan, acara spesial, waktu check-in yang diinginkan…",
+    "message_default": "Apakah bisa mengatur early check-in atau late check-out? Kami sedang merayakan momen spesial — bisakah dibantu dekorasi atau kue? Apakah tersedia menu halal atau vegetarian? Apakah tersedia layanan antar-jemput bandara?",
     "optional": "(opsional)",
     "chars_remaining": "karakter tersisa",
     "submit": "Kirim Pertanyaan",

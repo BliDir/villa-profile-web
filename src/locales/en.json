@@ -162,6 +162,7 @@
     "room_any": "Any Available Room",
     "message": "Special Requests",
     "message_placeholder": "Anything we should know? Dietary requirements, celebrations, preferred check-in time…",
+    "message_default": "Can we arrange an early check-in or late check-out? We're celebrating a special occasion — could you help with decorations or a cake? Are halal or vegetarian meal options available? Is airport transfer provided?",
     "optional": "(optional)",
     "chars_remaining": "characters remaining",
     "submit": "Send Inquiry",
