@@ -44,6 +44,10 @@ function applyTranslations() {
     el.setAttribute('content', t(el.getAttribute('data-i18n-content')));
   });
 
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    el.placeholder = t(el.getAttribute('data-i18n-placeholder'));
+  });
+
   updateSwitcher(locale);
 }
 
@@ -82,6 +86,8 @@ function addHreflang() {
   xDefault.href = window.location.origin + base;
   document.head.appendChild(xDefault);
 }
+
+export { t };
 
 export function initI18n() {
   addHreflang();
