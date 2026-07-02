@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Living &amp; Dining — an 80 m² open-plan space that flows onto the pool terrace." />
+    <meta name="description" data-i18n-content="meta.desc_living_dining" content="Living &amp; Dining — an 80 m² open-plan space that flows onto the pool terrace." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/src/css/animations.css" />
     <link rel="stylesheet" href="/src/css/lightbox.css" />
 
-    <title>Living &amp; Dining — Villa</title>
+    <title data-i18n="meta.title_living_dining">Living &amp; Dining — Villa</title>
   </head>
   <body>
 
@@ -28,13 +28,17 @@
           <span class="nav-toggle__bar"></span>
         </button>
         <ul id="nav-list">
-          <li><a href="/">Home</a></li>
-          <li><a href="/#pool-outdoor">Pool &amp; Outdoor</a></li>
-          <li><a href="/#interior-rooms">Rooms</a></li>
-          <li><a href="/#location">Location</a></li>
-          <li><a href="/#amenities">Amenities</a></li>
-          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/" data-i18n="nav.home">Home</a></li>
+          <li><a href="/#pool-outdoor" data-i18n="nav.pool_outdoor">Pool &amp; Outdoor</a></li>
+          <li><a href="/#interior-rooms" data-i18n="nav.rooms">Rooms</a></li>
+          <li><a href="/#location" data-i18n="nav.location">Location</a></li>
+          <li><a href="/#amenities" data-i18n="nav.amenities">Amenities</a></li>
+          <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
+        <div class="lang-switcher" aria-label="Select language">
+          <button class="lang-switcher__option is-active" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-switcher__option" data-lang="id" aria-pressed="false">ID</button>
+        </div>
       </nav>
     </header>
 
@@ -43,43 +47,46 @@
       <nav class="room-detail__breadcrumb" aria-label="Breadcrumb">
         <ol>
           <li><a href="/">Villa</a></li>
-          <li><a href="/#interior-rooms">Rooms</a></li>
-          <li aria-current="page">Living &amp; Dining</li>
+          <li><a href="/#interior-rooms" data-i18n="room_detail.breadcrumb_rooms">Rooms</a></li>
+          <li aria-current="page" data-i18n="rooms.living_dining.eyebrow">Living &amp; Dining</li>
         </ol>
       </nav>
 
       <section class="room-detail__hero" aria-label="Living and Dining hero image">
-        <img
-          class="room-detail__hero-img"
-          src="/images/rooms/living-dining-hero.jpg"
-          alt="Open-plan living and dining area with folding glass doors to the pool terrace"
-          width="2560"
-          height="1440"
-          fetchpriority="high"
-        />
+        <picture>
+          <source srcset="/images/main-suit-detail.webp" type="image/webp" />
+          <img
+            class="room-detail__hero-img"
+            src="/images/main-suit-detail.png"
+            alt="Open-plan living and dining area with folding glass doors to the pool terrace"
+            width="2560"
+            height="1440"
+            fetchpriority="high"
+          />
+        </picture>
         <div class="room-detail__hero-caption">
-          <span class="room-detail__eyebrow">Living &amp; Dining</span>
-          <h1 class="room-detail__title"><em>Where Everyone Gathers</em></h1>
+          <span class="room-detail__eyebrow" data-i18n="rooms.living_dining.eyebrow">Living &amp; Dining</span>
+          <h1 class="room-detail__title"><em data-i18n="rooms.living_dining.title">Where Everyone Gathers</em></h1>
         </div>
       </section>
 
       <div class="room-detail__specs-bar">
         <dl class="room-detail__specs">
           <div class="room-detail__spec">
-            <dt>Layout</dt>
-            <dd>Open-plan</dd>
+            <dt data-i18n="specs.layout">Layout</dt>
+            <dd data-i18n="rooms.living_dining.layout_val">Open-plan</dd>
           </div>
           <div class="room-detail__spec">
-            <dt>Dining</dt>
-            <dd>12 guests</dd>
+            <dt data-i18n="specs.dining">Dining</dt>
+            <dd data-i18n="rooms.living_dining.dining_val">12 guests</dd>
           </div>
           <div class="room-detail__spec">
-            <dt>Size</dt>
-            <dd>80 m²</dd>
+            <dt data-i18n="specs.size">Size</dt>
+            <dd data-i18n="rooms.living_dining.size_val">80 m²</dd>
           </div>
           <div class="room-detail__spec">
-            <dt>Aspect</dt>
-            <dd>Pool-facing</dd>
+            <dt data-i18n="specs.aspect">Aspect</dt>
+            <dd data-i18n="rooms.living_dining.aspect_val">Pool-facing</dd>
           </div>
         </dl>
       </div>
@@ -87,22 +94,40 @@
       <div class="room-detail__gallery-section">
         <div class="room-detail__gallery">
           <figure>
-            <img src="/images/rooms/living-dining-1.jpg" alt="Open-plan living area with lounge seating and pool view" width="1200" height="800" loading="lazy" />
+            <picture>
+              <source srcset="/images/main-suite-dresser.webp" type="image/webp" />
+              <img src="/images/main-suite-dresser.png" alt="Open-plan living area with lounge seating and pool view" width="1200" height="800" loading="lazy" />
+            </picture>
           </figure>
           <figure>
-            <img src="/images/rooms/living-dining-2.jpg" alt="Dining table set for 12 with candles and fresh flowers" width="600" height="440" loading="lazy" />
+            <picture>
+              <source srcset="/images/main-suite-terrace-2.webp" type="image/webp" />
+              <img src="/images/main-suite-terrace-2.png" alt="Dining table set for 12 with candles and fresh flowers" width="600" height="440" loading="lazy" />
+            </picture>
           </figure>
           <figure>
-            <img src="/images/rooms/living-dining-3.jpg" alt="Folding glass doors open to the pool terrace" width="600" height="440" loading="lazy" />
+            <picture>
+              <source srcset="/images/main-suit.webp" type="image/webp" />
+              <img src="/images/main-suit.png" alt="Folding glass doors open to the pool terrace" width="600" height="440" loading="lazy" />
+            </picture>
           </figure>
           <figure>
-            <img src="/images/rooms/living-dining-4.jpg" alt="Day beds on the semi-covered terrace" width="600" height="440" loading="lazy" />
+            <picture>
+              <source srcset="/images/main-suite-top-down.webp" type="image/webp" />
+              <img src="/images/main-suite-top-down.png" alt="Day beds on the semi-covered terrace" width="600" height="440" loading="lazy" />
+            </picture>
           </figure>
           <figure>
-            <img src="/images/rooms/living-dining-5.jpg" alt="Entertainment unit with smart TV and sound bar" width="600" height="440" loading="lazy" />
+            <picture>
+              <source srcset="/images/main-suite-shower.webp" type="image/webp" />
+              <img src="/images/main-suite-shower.png" alt="Entertainment unit with smart TV and sound bar" width="600" height="440" loading="lazy" />
+            </picture>
           </figure>
           <figure>
-            <img src="/images/rooms/living-dining-6.jpg" alt="Living area at golden hour with warm ambient lighting" width="600" height="440" loading="lazy" />
+            <picture>
+              <source srcset="/images/main-suite-terrace.webp" type="image/webp" />
+              <img src="/images/main-suite-terrace.png" alt="Living area at golden hour with warm ambient lighting" width="600" height="440" loading="lazy" />
+            </picture>
           </figure>
         </div>
       </div>
@@ -110,23 +135,23 @@
       <section class="room-detail__content">
 
         <div class="room-detail__description" data-animate>
-          <span class="room-detail__section-eyebrow">About This Space</span>
-          <h2>The Heart of the Villa</h2>
-          <p>
+          <span class="room-detail__section-eyebrow" data-i18n="room_detail.about_space">About This Space</span>
+          <h2 data-i18n="rooms.living_dining.about_heading">The Heart of the Villa</h2>
+          <p data-i18n="rooms.living_dining.p1">
             The living and dining area is the spatial centrepiece of the villa — an
             80 m² open-plan room that erases the boundary between indoors and out.
             Folding glass doors span the entire pool-facing wall and retract fully,
             turning the room into a covered outdoor pavilion when the weather
             invites it.
           </p>
-          <p>
+          <p data-i18n="rooms.living_dining.p2">
             A long teak dining table seats twelve comfortably, making this the natural
             setting for slow group dinners, candle-lit evenings, or the kind of
             lazy breakfast that stretches to noon. The lounge area wraps around a
             pair of deep-cushioned sofas, a low coffee table, and floor-to-ceiling
             bookshelves stocked with novels, art books, and local maps.
           </p>
-          <p>
+          <p data-i18n="rooms.living_dining.p3">
             A full sound system connects wirelessly to any device, and a large-format
             smart TV makes film nights an occasion. When you want something quieter,
             a set of day beds on the semi-covered terrace provide the perfect middle
@@ -135,35 +160,35 @@
         </div>
 
         <div class="room-detail__facilities" data-animate data-animate-delay="1">
-          <h3>Facilities</h3>
+          <h3 data-i18n="room_detail.facilities">Facilities</h3>
           <ul>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h18"/><path d="M3 21h18"/><path d="M6 3v18"/><path d="M18 3v18"/></svg>
-              Dining table (seats 12)
+              <span data-i18n="rooms.living_dining.f1">Dining table (seats 12)</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 9V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v3m18 0v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9m18 0H2"/></svg>
-              Deep-cushioned lounge seating
+              <span data-i18n="rooms.living_dining.f2">Deep-cushioned lounge seating</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg>
-              Large-format smart TV
+              <span data-i18n="rooms.living_dining.f3">Large-format smart TV</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-              Wireless sound system
+              <span data-i18n="rooms.living_dining.f4">Wireless sound system</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-              Pool terrace access (day beds)
+              <span data-i18n="rooms.living_dining.f5">Pool terrace access (day beds)</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 10 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
-              Air conditioning
+              <span data-i18n="rooms.living_dining.f6">Air conditioning</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-              High-speed WiFi
+              <span data-i18n="rooms.living_dining.f7">High-speed WiFi</span>
             </li>
           </ul>
         </div>
@@ -171,21 +196,21 @@
       </section>
 
       <section class="room-detail__cta-section" aria-label="Book the villa">
-        <h2>Ready to Make It Yours?</h2>
-        <p>Reach out and we'll take care of everything — from arrival to departure.</p>
+        <h2 data-i18n="room_detail.cta_heading">Ready to Make It Yours?</h2>
+        <p data-i18n="room_detail.cta_sub">Reach out and we'll take care of everything — from arrival to departure.</p>
         <a href="/#contact" class="room-detail__book-btn">
-          Enquire Now <span aria-hidden="true">→</span>
+          <span data-i18n="room_detail.cta_btn">Enquire Now</span> <span aria-hidden="true">→</span>
         </a>
       </section>
 
       <nav class="room-detail__room-nav" aria-label="Room navigation">
         <a href="/rooms/bedroom-three/" class="room-detail__prev">
-          <span class="room-nav__label">← Previous</span>
-          <span class="room-nav__name">Bedroom Three</span>
+          <span class="room-nav__label" data-i18n="room_detail.nav_prev">← Previous</span>
+          <span class="room-nav__name" data-i18n="rooms.living_dining.prev">Bedroom Three</span>
         </a>
         <a href="/rooms/kitchen/" class="room-detail__next">
-          <span class="room-nav__label">Next →</span>
-          <span class="room-nav__name">Kitchen</span>
+          <span class="room-nav__label" data-i18n="room_detail.nav_next">Next →</span>
+          <span class="room-nav__name" data-i18n="rooms.living_dining.next">Kitchen</span>
         </a>
       </nav>
 
@@ -194,12 +219,12 @@
     <footer>
       <div class="footer__inner">
         <span class="footer__name">Villa</span>
-        <p class="footer__copy">&copy; 2025 Villa. All rights reserved.</p>
+        <p class="footer__copy" data-i18n="footer.copy">&copy; 2026 Villa. All rights reserved.</p>
       </div>
     </footer>
 
     <div class="room-detail__sticky-cta" aria-hidden="true">
-      <a href="/#contact" tabindex="-1">Book This Room</a>
+      <a href="/#contact" tabindex="-1" data-i18n="room_detail.book_sticky">Book This Room</a>
     </div>
 
     <script type="module" src="/src/js/main-room.js"></script>
