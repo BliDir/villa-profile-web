@@ -73,7 +73,11 @@ jobs:
         run: |
           gh release list --json tagName,isDraft \
             --jq '.[] | select(.isDraft) | .tagName' \
-            | xargs -r -I{} gh release delete {} --yes --cleanup-tag
+            | while IFS= read -r tag; do
+                gh release delete "$tag" --yes 2>/dev/null || true
+                gh api --method DELETE \
+                  "repos/$GITHUB_REPOSITORY/git/refs/tags/$tag" 2>/dev/null || true
+              done
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
